@@ -24,7 +24,7 @@
                           <at-component-description>SVG - ATSCADA Web Component</at-component-description>
                           <atscada-svgvalue-item at-name="int_vl" at-min="0" at-type="Int" at-max="0" at-properties="Value" at-content="SVGValue Item" at-data-tag-name="HSMTTMS1.temp"></atscada-svgvalue-item>
                           <atscada-svgvalue-item at-name="float_vl" at-min="0" at-type="Float" at-max="0" at-properties="Value" at-content="SVGValue Item" at-data-tag-name="HSMTTMS2.temp"></atscada-svgvalue-item>
-                          <atscada-svgvalue-item at-name="bool_vl" at-min="0" at-type="Bool" at-max="0" at-properties="Value" at-content="SVGValue Item" at-data-tag-name="HSMTTMS1.offset"></atscada-svgvalue-item>
+                          <atscada-svgvalue-item at-name="bool_vl" at-min="0" at-type="Bool" at-max="0" at-properties="Value" at-content="SVGValue Item" at-data-tag-name="HSMTTMS3.offset"></atscada-svgvalue-item>
                           <atscada-svgvalue-item at-name="string_vl" at-min="0" at-type="String" at-max="0" at-properties="Value" at-content="SVGValue Item" at-data-tag-name="HSMTTMS1.string"></atscada-svgvalue-item>
                           <atscada-svgvalue-item at-name="tittle_vl" at-min="0" at-type="String" at-max="0" at-properties="Value" at-content="SVGValue Item" at-data-tag-name="HSMTTMS2.string"></atscada-svgvalue-item>
                           <atscada-svgvalue-item at-name="vl" at-min="0" at-type="Int" at-max="0" at-properties="Value" at-content="SVGValue Item" at-data-tag-name="HSMTTMS3.temp"></atscada-svgvalue-item>
@@ -39,6 +39,12 @@
                           <atscada-svgcutaway-item at-name="value_w1" at-id2="value1" at-min="0" at-max="100" at-data-tag-name="HSMTTMS2.temp"></atscada-svgcutaway-item>
                           <atscada-svgcutaway-item at-name="value_w2" at-id2="value2" at-min="0" at-max="100" at-data-tag-name="HSMTTMS3.temp"></atscada-svgcutaway-item>
                         </atscada-svg>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-Card at-content="Name" at-data-tag-name="HSMTTMS1.temp" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>NewCard</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-Card>
                       </atscada-assembly>
                     </atscada-components>
                   </atscada-column>
