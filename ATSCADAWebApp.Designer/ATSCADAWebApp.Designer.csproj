@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A82CEBE-3B30-4A56-8A7D-71434C3BD1BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ATSCADAWebApp.Designer</RootNamespace>
+    <AssemblyName>FastWeb Designer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\AboutCommand.cs" />
+    <Compile Include="Command\AddComponentCommand.cs" />
+    <Compile Include="Command\AddCompositeCommand.cs" />
+    <Compile Include="Command\CommandFactory.cs" />
+    <Compile Include="Command\ContentCommand.cs" />
+    <Compile Include="Command\CopyCommand.cs" />
+    <Compile Include="Command\CutCommand.cs" />
+    <Compile Include="Command\EscapeCommand.cs" />
+    <Compile Include="Command\PasteCommand.cs" />
+    <Compile Include="Command\QuickCommand.cs" />
+    <Compile Include="Command\DownCommand.cs" />
+    <Compile Include="Command\ExitCommand.cs" />
+    <Compile Include="Command\CommandBase.cs" />
+    <Compile Include="Command\DeleteCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\ICommandFactory.cs" />
+    <Compile Include="Command\NewCommand.cs" />
+    <Compile Include="Command\OpenCommand.cs" />
+    <Compile Include="Command\RegisterCommand.cs" />
+    <Compile Include="Command\SaveCommand.cs" />
+    <Compile Include="Command\SaveAsCommand.cs" />
+    <Compile Include="Command\UpCommand.cs" />
+    <Compile Include="Command\UpdateCommand.cs" />
+    <Compile Include="Presenter\AddComponentPresenter.cs" />
+    <Compile Include="Presenter\ComponentPresenter.cs" />
+    <Compile Include="Presenter\ContextMenuStripPresenter.cs" />
+    <Compile Include="Presenter\CompositePresenter.cs" />
+    <Compile Include="Presenter\MainPresenter.cs" />
+    <Compile Include="Presenter\MenuPresenter.cs" />
+    <Compile Include="Presenter\ToolbarPresenter.cs" />
+    <Compile Include="Presenter\ToolStripPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ClipboardAction.cs" />
+    <Compile Include="Service\ClipboardService.cs" />
+    <Compile Include="Service\FileHelper.cs" />
+    <Compile Include="Service\IClipboardService.cs" />
+    <Compile Include="Service\IStorageService.cs" />
+    <Compile Include="Service\StorageService.cs" />
+    <Compile Include="View\AboutView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AboutView.Designer.cs">
+      <DependentUpon>AboutView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddComponentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddComponentView.Designer.cs">
+      <DependentUpon>AddComponentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComponentView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\ContextMenuStripView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\CompositeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Interfaces\IAddComponentView.cs" />
+    <Compile Include="View\Interfaces\IComponentView.cs" />
+    <Compile Include="View\Interfaces\IContextMenuStripView.cs" />
+    <Compile Include="View\Interfaces\ICompositeView.cs" />
+    <Compile Include="View\Interfaces\IMainView.cs" />
+    <Compile Include="View\Interfaces\IMenuView.cs" />
+    <Compile Include="View\Interfaces\IToolbarView.cs" />
+    <Compile Include="View\Interfaces\IToolStripView.cs" />
+    <Compile Include="View\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\ToolbarView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\ToolStripView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AboutView.resx">
+      <DependentUpon>AboutView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddComponentView.resx">
+      <DependentUpon>AddComponentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <Content Include="Resources\About.png" />
+    <Content Include="Resources\AddColumn.png" />
+    <Content Include="Resources\AddComponent.png" />
+    <Content Include="Resources\AddRow.png" />
+    <Content Include="Resources\AddView.png" />
+    <Content Include="Resources\App.png" />
+    <Content Include="Resources\Column.png" />
+    <Content Include="Resources\Content.png" />
+    <Content Include="Resources\Copy.png" />
+    <Content Include="Resources\Cut.png" />
+    <Content Include="Resources\Escape.png" />
+    <Content Include="Resources\Icon.png" />
+    <Content Include="Resources\Paste.png" />
+    <Content Include="Resources\Quick.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\Down.png" />
+    <Content Include="Resources\Component.png" />
+    <Content Include="Resources\Exit.png" />
+    <Content Include="Resources\Icon.ico" />
+    <Content Include="Resources\Register.png" />
+    <Content Include="Resources\Row.png" />
+    <Content Include="Resources\Selected.png" />
+    <Content Include="Resources\Up.png" />
+    <Content Include="Resources\Update.png" />
+    <Content Include="Resources\New.png" />
+    <Content Include="Resources\Open.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\SaveAs.png" />
+    <Content Include="Resources\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ATSCADAWebApp.Component\ATSCADAWebApp.Component.csproj">
+      <Project>{061508EB-7256-433E-9F66-66762D4EF1AA}</Project>
+      <Name>ATSCADAWebApp.Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATSCADAWebApp.Core\ATSCADAWebApp.Core.csproj">
+      <Project>{5e377be7-a10f-4056-8164-4f1294f12594}</Project>
+      <Name>ATSCADAWebApp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATSCADAWebApp.Extension\ATSCADAWebApp.Extension.csproj">
+      <Project>{51D837CA-6EB3-4EF3-8164-DDFAAA8655C5}</Project>
+      <Name>ATSCADAWebApp.Extension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

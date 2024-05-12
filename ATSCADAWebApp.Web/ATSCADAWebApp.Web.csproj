@@ -1,0 +1,1010 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67A18420-9616-45AC-B24C-557982951A58}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATSCADAWebApp.Web</RootNamespace>
+    <AssemblyName>ATSCADAFastWeb.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44367</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Svg">
+      <HintPath>D:\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppStart\BundleConfig.cs" />
+    <Compile Include="AppStart\FilterConfig.cs" />
+    <Compile Include="AppStart\RouteConfig.cs" />
+    <Compile Include="Attribute\AjaxOnlyAttribute.cs" />
+    <Compile Include="Controllers\AlarmController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CameraController.cs" />
+    <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\ExportController.cs" />
+    <Compile Include="Controllers\GoogleMapController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\RoutingController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Camera\CameraEncryption.cs" />
+    <Compile Include="Models\Camera\CameraInput.cs" />
+    <Compile Include="Models\Camera\DecodeJson.cs" />
+    <Compile Include="Models\ErrorView.cs" />
+    <Compile Include="Models\IndexView.cs" />
+    <Compile Include="Models\InfoView.cs" />
+    <Compile Include="Models\Camera\InputComParams.cs" />
+    <Compile Include="Models\Camera\InputParams.cs" />
+    <Compile Include="Models\LoginView.cs" />
+    <Compile Include="Models\PageView.cs" />
+    <Compile Include="Models\Camera\ResultCommon.cs" />
+    <Compile Include="Models\Camera\ResultData.cs" />
+    <Compile Include="Models\Camera\ResultLink.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppConfig\ATSCADAWebConfig.xml" />
+    <Content Include="AppScripts\App\atscada-app-controller.js" />
+    <Content Include="AppScripts\App\atscada-app-element.js" />
+    <Content Include="AppScripts\App\atscada-app-model.js" />
+    <Content Include="AppScripts\App\atscada-app-view.js" />
+    <Content Include="AppScripts\App\Layout\atscada-app-content-element.js" />
+    <Content Include="AppScripts\App\Layout\atscada-app-header-element.js" />
+    <Content Include="AppScripts\App\Layout\atscada-app-menu-element.js" />
+    <Content Include="AppScripts\App\Router\atscada-app-router-compiler.js" />
+    <Content Include="AppScripts\App\Router\atscada-app-router-service.js" />
+    <Content Include="AppScripts\App\Router\atscada-app-router.js" />
+    <Content Include="AppScripts\App\View\atscada-app-view-element.js" />
+    <Content Include="AppScripts\Component\AlarmReporter\atscada-alarm-reporter-controller.js" />
+    <Content Include="AppScripts\Component\AlarmReporter\atscada-alarm-reporter-element.js" />
+    <Content Include="AppScripts\Component\AlarmReporter\atscada-alarm-reporter-model.js" />
+    <Content Include="AppScripts\Component\AlarmReporter\atscada-alarm-reporter-view.js" />
+    <Content Include="AppScripts\Component\AlarmViewer\atscada-alarm-viewer-controller.js" />
+    <Content Include="AppScripts\Component\AlarmViewer\atscada-alarm-viewer-element.js" />
+    <Content Include="AppScripts\Component\AlarmViewer\atscada-alarm-viewer-model.js" />
+    <Content Include="AppScripts\Component\AlarmViewer\atscada-alarm-viewer-view.js" />
+    <Content Include="AppScripts\Component\Gauge\atscada-gauge-element.js" />
+    <Content Include="AppScripts\Component\Gauge\atscada-gauge-view.js" />
+    <Content Include="AppScripts\Component\ChartDemo\atscada-chartdemo-element.js" />
+    <Content Include="AppScripts\Component\ChartDemo\atscada-chartdemo-view.js" />
+    <Content Include="AppScripts\Component\Card\atscada-card-element.js" />
+    <Content Include="AppScripts\Component\Card\atscada-card-view.js" />
+    <Content Include="AppScripts\Component\Chart\atscada-chart-element.js" />
+    <Content Include="AppScripts\Component\Chart\atscada-chart-item-element.js" />
+    <Content Include="AppScripts\Component\Chart\atscada-chart-view.js" />
+    <Content Include="AppScripts\Component\DataReporter\atscada-data-reporter-controller.js" />
+    <Content Include="AppScripts\Component\DataReporter\atscada-data-reporter-element.js" />
+    <Content Include="AppScripts\Component\DataReporter\atscada-data-reporter-item-element.js" />
+    <Content Include="AppScripts\Component\DataReporter\atscada-data-reporter-model.js" />
+    <Content Include="AppScripts\Component\DataReporter\atscada-data-reporter-view.js" />
+    <Content Include="AppScripts\Component\Gauge\gauge.js" />
+    <Content Include="AppScripts\Component\GoogleMap\atscada-google-map-controller.js" />
+    <Content Include="AppScripts\Component\GoogleMap\atscada-google-map-element.js" />
+    <Content Include="AppScripts\Component\GoogleMap\atscada-google-map-marker-history.js" />
+    <Content Include="AppScripts\Component\GoogleMap\atscada-google-map-marker.js" />
+    <Content Include="AppScripts\Component\GoogleMap\atscada-google-map-model.js" />
+    <Content Include="AppScripts\Component\GoogleMap\atscada-google-map-param.js" />
+    <Content Include="AppScripts\Component\GoogleMap\atscada-google-map-view.js" />
+    <Content Include="AppScripts\Component\MixerStation\atscada-mixer-controller.js" />
+    <Content Include="AppScripts\Component\MixerStation\atscada-mixer-element.js" />
+    <Content Include="AppScripts\Component\MixerStation\atscada-mixer-view.js" />
+    <Content Include="AppScripts\Component\PIDStation\atscada-pid-controller.js" />
+    <Content Include="AppScripts\Component\PIDStation\atscada-pid-element.js" />
+    <Content Include="AppScripts\Component\PIDStation\atscada-pid-view.js" />
+    <Content Include="AppScripts\Component\Input\atscada-input-controller.js" />
+    <Content Include="AppScripts\Component\Input\atscada-input-element.js" />
+    <Content Include="AppScripts\Component\Input\atscada-input-view.js" />
+    <Content Include="AppScripts\Component\Slider\atscada-slider-controller.js" />
+    <Content Include="AppScripts\Component\Slider\atscada-slider-element.js" />
+    <Content Include="AppScripts\Component\Slider\atscada-slider-view.js" />
+    <Content Include="AppScripts\Component\StreamCamera\atscada-stream-camera-element.js" />
+    <Content Include="AppScripts\Component\SVG\atscada-svg-element.js" />
+    <Content Include="AppScripts\Component\SVG\atscada-svgvalue-item-element.js" />
+    <Content Include="AppScripts\Component\SVG\atscada-svgalarm-item-element.js" />
+    <Content Include="AppScripts\Component\Gauge\atscada-gauge-element.js" />
+    <Content Include="AppScripts\Component\SVG\atscada-svgcutaway-item-element.js" />
+    <Content Include="AppScripts\Component\SVG\atscada-svg-view.js" />
+    <Content Include="AppScripts\Component\Switch\atscada-switch-controller.js" />
+    <Content Include="AppScripts\Component\Switch\atscada-switch-element.js" />
+    <Content Include="AppScripts\Component\Switch\atscada-switch-view.js" />
+    <Content Include="AppScripts\Core\AlarmReport\atscada-alarm-report-compiler.js" />
+    <Content Include="AppScripts\Core\AlarmReport\atscada-alarm-report-log.js" />
+    <Content Include="AppScripts\Core\AlarmReport\atscada-alarm-report-param.js" />
+    <Content Include="AppScripts\Core\AlarmReport\atscada-alarm-report-service.js" />
+    <Content Include="AppScripts\Core\Alarm\atscada-alarm-acknowledge-result.js" />
+    <Content Include="AppScripts\Core\Alarm\atscada-alarm-compiler.js" />
+    <Content Include="AppScripts\Core\Alarm\atscada-alarm-param.js" />
+    <Content Include="AppScripts\Core\Alarm\atscada-alarm-service.js" />
+    <Content Include="AppScripts\Core\Alarm\atscada-alarm.js" />
+    <Content Include="AppScripts\Core\Alarm\atscada-alarm-acknowledge-param.js" />
+    <Content Include="AppScripts\Core\Common\atscada-dispatcher.js" />
+    <Content Include="AppScripts\Core\Common\atscada-fetch-service.js" />
+    <Content Include="AppScripts\Core\Common\atscada-importer.js" />
+    <Content Include="AppScripts\Core\Component\DataTable\atscada-data-table-element.js" />
+    <Content Include="AppScripts\Core\Component\DateRangePicker\atscada-date-range-picker-element.js" />
+    <Content Include="AppScripts\Core\Component\IonRangeSlider\atscada-ion-range-slider-element.js" />
+    <Content Include="AppScripts\Core\Component\Nvd3Chart\atscada-nvd3-bar-chart.js" />
+    <Content Include="AppScripts\Core\Component\Nvd3Chart\atscada-nvd3-chart-element.js" />
+    <Content Include="AppScripts\Core\Component\Nvd3Chart\atscada-nvd3-chart-factory.js" />
+    <Content Include="AppScripts\Core\Component\Nvd3Chart\atscada-nvd3-donut-chart.js" />
+    <Content Include="AppScripts\Core\Component\Nvd3Chart\atscada-nvd3-line-chart.js" />
+    <Content Include="AppScripts\Core\Component\Nvd3Chart\atscada-nvd3-pie-chart.js" />
+    <Content Include="AppScripts\Core\Component\Redirect\atscada-redirect-element.js" />
+    <Content Include="AppScripts\Core\Component\Switchery\atscada-switchery-element.js" />
+    <Content Include="AppScripts\Core\Component\Task\atscada-task-element.js" />
+    <Content Include="AppScripts\Core\Component\Task\atscada-task-loader.js" />
+    <Content Include="AppScripts\Core\Component\Task\atscada-task-model.js" />
+    <Content Include="AppScripts\Core\Component\Task\atscada-task-multi-model.js" />
+    <Content Include="AppScripts\Core\Component\Toast\atscada-toast-element.js" />
+    <Content Include="AppScripts\Core\Component\Widget\atscada-widget-element.js" />
+    <Content Include="AppScripts\Core\DataReport\atscada-data-report-compiler.js" />
+    <Content Include="AppScripts\Core\DataReport\atscada-data-report-item-param.js" />
+    <Content Include="AppScripts\Core\DataReport\atscada-data-report-log.js" />
+    <Content Include="AppScripts\Core\DataReport\atscada-data-report-param.js" />
+    <Content Include="AppScripts\Core\DataReport\atscada-data-report-service.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-collection.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-command.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-compiler.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-reader.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-result-package.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-service.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-tag.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-task.js" />
+    <Content Include="AppScripts\Core\Data\atscada-data-writer.js" />
+    <Content Include="AppScripts\Core\Export\atscada-export-compiler.js" />
+    <Content Include="AppScripts\Core\Export\atscada-export-param.js" />
+    <Content Include="AppScripts\Core\Export\atscada-export-service.js" />
+    <Content Include="AppScripts\Core\GoogleMap\atscada-google-map-compiler.js" />
+    <Content Include="AppScripts\Core\GoogleMap\atscada-google-map-log.js" />
+    <Content Include="AppScripts\Core\GoogleMap\atscada-google-map-param.js" />
+    <Content Include="AppScripts\Core\GoogleMap\atscada-google-map-service.js" />
+    <Content Include="AppScripts\MVC_Architecture.png" />
+    <Content Include="AppTemplate\css\material\app.min.css" />
+    <Content Include="AppTemplate\css\material\icon\material-icons.css" />
+    <Content Include="AppTemplate\css\material\images\cover-pattern.png" />
+    <Content Include="AppTemplate\css\material\images\cover-sidebar-user.jpg" />
+    <Content Include="AppTemplate\css\material\images\cover-sidebar.jpg" />
+    <Content Include="AppTemplate\css\material\images\error-page-pattern.png" />
+    <Content Include="AppTemplate\css\material\theme\black.min.css" />
+    <Content Include="AppTemplate\css\material\theme\blue.min.css" />
+    <Content Include="AppTemplate\css\material\theme\cyan.min.css" />
+    <Content Include="AppTemplate\css\material\theme\green.min.css" />
+    <Content Include="AppTemplate\css\material\theme\indigo.min.css" />
+    <Content Include="AppTemplate\css\material\theme\lime.min.css" />
+    <Content Include="AppTemplate\css\material\theme\orange.min.css" />
+    <Content Include="AppTemplate\css\material\theme\pink.min.css" />
+    <Content Include="AppTemplate\css\material\theme\purple.min.css" />
+    <Content Include="AppTemplate\css\material\theme\red.min.css" />
+    <Content Include="AppTemplate\css\material\theme\teal.min.css" />
+    <Content Include="AppTemplate\css\material\theme\yellow.min.css" />
+    <Content Include="AppTemplate\css\vendor.min.css" />
+    <Content Include="AppTemplate\js\app.min.js" />
+    <Content Include="AppTemplate\js\gauge.js" />
+    <Content Include="AppTemplate\js\theme\material.js" />
+    <Content Include="AppTemplate\js\theme\material.min.js" />
+    <Content Include="AppTemplate\js\vendor.min.js" />
+    <Content Include="AppTemplate\plugins\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="AppTemplate\plugins\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="AppTemplate\plugins\d3\d3.min.js" />
+    <Content Include="AppTemplate\plugins\datatables.net-bs5\css\dataTables.bootstrap5.min.css" />
+    <Content Include="AppTemplate\plugins\datatables.net-bs5\js\dataTables.bootstrap5.min.js" />
+    <Content Include="AppTemplate\plugins\datatables.net-responsive-bs5\css\responsive.bootstrap5.min.css" />
+    <Content Include="AppTemplate\plugins\datatables.net-responsive-bs5\js\responsive.bootstrap5.min.js" />
+    <Content Include="AppTemplate\plugins\datatables.net-responsive\js\dataTables.responsive.js" />
+    <Content Include="AppTemplate\plugins\datatables.net-responsive\js\dataTables.responsive.min.js" />
+    <Content Include="AppTemplate\plugins\datatables.net\js\jquery.dataTables.js" />
+    <Content Include="AppTemplate\plugins\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="AppTemplate\plugins\ion-rangeslider\css\ion.rangeSlider.css" />
+    <Content Include="AppTemplate\plugins\ion-rangeslider\css\ion.rangeSlider.min.css" />
+    <Content Include="AppTemplate\plugins\ion-rangeslider\js\ion.rangeSlider.js" />
+    <Content Include="AppTemplate\plugins\ion-rangeslider\js\ion.rangeSlider.min.js" />
+    <Content Include="AppTemplate\plugins\loading-overlay\js\loadingoverlay.min.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\af.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ar-dz.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ar-kw.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ar-ly.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ar-ma.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ar-sa.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ar-tn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ar.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\az.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\be.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\bg.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\bm.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\bn-bd.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\bn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\bo.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\br.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\bs.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ca.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\cs.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\cv.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\cy.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\da.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\de-at.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\de-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\de.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\dv.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\el.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-au.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-ca.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-gb.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-ie.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-il.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-in.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-nz.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\en-sg.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\eo.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\es-do.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\es-mx.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\es-us.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\es.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\et.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\eu.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fa.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fi.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fil.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fo.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fr-ca.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fr-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fr.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\fy.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ga.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\gd.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\gl.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\gom-deva.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\gom-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\gu.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\he.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\hi.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\hr.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\hu.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\hy-am.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\id.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\is.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\it-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\it.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ja.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\jv.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ka.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\kk.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\km.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\kn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ko.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ku.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ky.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\lb.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\lo.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\lt.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\lv.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\me.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\mi.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\mk.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ml.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\mn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\mr.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ms-my.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ms.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\mt.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\my.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\nb.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ne.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\nl-be.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\nl.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\nn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\oc-lnc.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\pa-in.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\pl.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\pt-br.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\pt.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ro.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ru.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sd.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\se.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\si.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sk.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sl.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sq.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sr-cyrl.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sr.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ss.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sv.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\sw.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ta.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\te.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tet.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tg.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\th.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tk.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tl-ph.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tlh.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tr.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tzl.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tzm-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\tzm.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ug-cn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\uk.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\ur.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\uz-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\uz.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\vi.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\x-pseudo.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\yo.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\zh-cn.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\zh-hk.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\zh-mo.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\locale\zh-tw.js" />
+    <Content Include="AppTemplate\plugins\moment\dist\moment.js" />
+    <Content Include="AppTemplate\plugins\moment\ender.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\af.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ar-dz.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ar-kw.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ar-ly.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ar-ma.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ar-sa.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ar-tn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ar.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\az.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\be.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\bg.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\bm.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\bn-bd.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\bn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\bo.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\br.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\bs.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ca.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\cs.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\cv.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\cy.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\da.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\de-at.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\de-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\de.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\dv.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\el.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-au.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-ca.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-gb.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-ie.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-il.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-in.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-nz.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\en-sg.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\eo.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\es-do.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\es-mx.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\es-us.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\es.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\et.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\eu.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fa.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fi.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fil.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fo.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fr-ca.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fr-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fr.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\fy.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ga.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\gd.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\gl.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\gom-deva.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\gom-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\gu.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\he.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\hi.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\hr.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\hu.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\hy-am.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\id.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\is.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\it-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\it.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ja.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\jv.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ka.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\kk.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\km.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\kn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ko.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ku.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ky.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\lb.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\lo.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\lt.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\lv.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\me.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\mi.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\mk.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ml.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\mn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\mr.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ms-my.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ms.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\mt.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\my.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\nb.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ne.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\nl-be.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\nl.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\nn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\oc-lnc.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\pa-in.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\pl.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\pt-br.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\pt.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ro.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ru.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sd.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\se.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\si.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sk.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sl.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sq.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sr-cyrl.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sr.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ss.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sv.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\sw.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ta.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\te.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tet.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tg.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\th.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tk.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tl-ph.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tlh.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tr.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tzl.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tzm-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\tzm.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ug-cn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\uk.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\ur.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\uz-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\uz.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\vi.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\x-pseudo.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\yo.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\zh-cn.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\zh-hk.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\zh-mo.js" />
+    <Content Include="AppTemplate\plugins\moment\locale\zh-tw.js" />
+    <Content Include="AppTemplate\plugins\moment\min\locales.js" />
+    <Content Include="AppTemplate\plugins\moment\min\locales.min.js" />
+    <Content Include="AppTemplate\plugins\moment\min\moment-with-locales.js" />
+    <Content Include="AppTemplate\plugins\moment\min\moment-with-locales.min.js" />
+    <Content Include="AppTemplate\plugins\moment\min\moment.min.js" />
+    <Content Include="AppTemplate\plugins\moment\moment.js" />
+    <Content Include="AppTemplate\plugins\moment\package.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\check-overflow.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\date-from-array.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\from-anything.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\from-array.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\from-object.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\from-string-and-array.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\from-string-and-format.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\from-string.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\local.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\parsing-flags.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\utc.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\create\valid.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\abs.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\add-subtract.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\as.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\bubble.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\clone.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\constructor.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\create.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\duration.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\get.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\humanize.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\iso-string.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\prototype.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\duration\valid.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\format\format.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\base-config.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\calendar.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\constructor.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\en.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\formats.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\invalid.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\lists.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\locale.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\locales.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\ordinal.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\pre-post-format.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\prototype.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\relative.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\locale\set.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\add-subtract.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\calendar.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\clone.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\compare.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\constructor.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\creation-data.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\diff.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\format.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\from.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\get-set.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\locale.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\min-max.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\moment.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\now.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\prototype.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\start-end-of.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\to-type.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\to.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\moment\valid.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\parse\regex.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\parse\token.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\aliases.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\constants.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\day-of-month.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\day-of-week.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\day-of-year.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\era.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\hour.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\millisecond.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\minute.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\month.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\offset.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\priorities.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\quarter.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\second.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\timestamp.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\timezone.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\units.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\week-calendar-utils.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\week-year.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\week.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\units\year.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\abs-ceil.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\abs-floor.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\abs-round.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\compare-arrays.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\defaults.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\deprecate.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\extend.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\has-own-prop.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\hooks.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\index-of.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-array.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-calendar-spec.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-date.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-function.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-leap-year.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-moment-input.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-number.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-object-empty.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-object.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-string.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\is-undefined.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\keys.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\map.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\mod.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\some.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\to-int.js" />
+    <Content Include="AppTemplate\plugins\moment\src\lib\utils\zero-fill.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\af.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ar-dz.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ar-kw.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ar-ly.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ar-ma.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ar-sa.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ar-tn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ar.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\az.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\be.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\bg.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\bm.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\bn-bd.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\bn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\bo.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\br.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\bs.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ca.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\cs.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\cv.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\cy.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\da.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\de-at.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\de-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\de.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\dv.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\el.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-au.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-ca.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-gb.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-ie.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-il.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-in.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-nz.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\en-sg.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\eo.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\es-do.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\es-mx.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\es-us.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\es.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\et.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\eu.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fa.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fi.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fil.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fo.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fr-ca.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fr-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fr.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\fy.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ga.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\gd.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\gl.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\gom-deva.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\gom-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\gu.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\he.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\hi.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\hr.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\hu.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\hy-am.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\id.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\is.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\it-ch.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\it.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ja.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\jv.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ka.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\kk.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\km.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\kn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ko.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ku.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ky.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\lb.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\lo.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\lt.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\lv.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\me.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\mi.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\mk.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ml.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\mn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\mr.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ms-my.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ms.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\mt.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\my.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\nb.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ne.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\nl-be.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\nl.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\nn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\oc-lnc.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\pa-in.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\pl.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\pt-br.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\pt.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ro.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ru.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sd.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\se.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\si.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sk.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sl.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sq.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sr-cyrl.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sr.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ss.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sv.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\sw.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ta.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\te.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tet.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tg.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\th.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tk.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tl-ph.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tlh.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tr.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tzl.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tzm-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\tzm.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ug-cn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\uk.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\ur.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\uz-latn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\uz.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\vi.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\x-pseudo.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\yo.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\zh-cn.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\zh-hk.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\zh-mo.js" />
+    <Content Include="AppTemplate\plugins\moment\src\locale\zh-tw.js" />
+    <Content Include="AppTemplate\plugins\moment\src\moment.js" />
+    <Content Include="AppTemplate\plugins\nvd3\build\nv.d3.css" />
+    <Content Include="AppTemplate\plugins\nvd3\build\nv.d3.js" />
+    <Content Include="AppTemplate\plugins\nvd3\build\nv.d3.min.css" />
+    <Content Include="AppTemplate\plugins\nvd3\build\nv.d3.min.js" />
+    <Content Include="AppTemplate\plugins\switchery\dist\switchery.css" />
+    <Content Include="AppTemplate\plugins\switchery\dist\switchery.js" />
+    <Content Include="AppTemplate\plugins\switchery\dist\switchery.min.css" />
+    <Content Include="AppTemplate\plugins\switchery\dist\switchery.min.js" />
+    <Content Include="AppTemplate\plugins\videojs\video-js.css" />
+    <Content Include="AppTemplate\plugins\videojs\video.js" />
+    <Content Include="AppTemplate\plugins\videojs\video.min.js" />
+    <Content Include="AppTemplate\plugins\videojs\videojs-http-streaming.js" />
+    <Content Include="AppTemplate\plugins\videojs\videojs-http-streaming.min.js" />
+    <Content Include="AppTemplate\webfonts\fa-brands-400.svg" />
+    <Content Include="AppTemplate\webfonts\fa-regular-400.svg" />
+    <Content Include="AppTemplate\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Image\admin.png" />
+    <Content Include="Image\background.png" />
+    <Content Include="Image\home_35px.png" />
+    <Content Include="Image\lorry_35px.png" />
+    <Content Include="Image\map_pin_15px.png" />
+    <Content Include="Image\map_pin_17px.png" />
+    <Content Include="SVGFile\Layout1.txt" />
+    <Content Include="SVGFile\Layout2.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Error\Oops.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="AppTemplate\css\.DS_Store" />
+    <Content Include="AppTemplate\css\fonts\bootstrap-icons.woff" />
+    <Content Include="AppTemplate\css\fonts\bootstrap-icons.woff2" />
+    <Content Include="AppTemplate\css\material\icon\iconfont\MaterialIcons-Regular.ttf" />
+    <Content Include="AppTemplate\css\material\icon\iconfont\MaterialIconsOutlined-Regular.otf" />
+    <Content Include="AppTemplate\css\material\icon\iconfont\MaterialIconsRound-Regular.otf" />
+    <Content Include="AppTemplate\css\material\icon\iconfont\MaterialIconsSharp-Regular.otf" />
+    <Content Include="AppTemplate\css\material\icon\iconfont\MaterialIconsTwoTone-Regular.otf" />
+    <Content Include="AppTemplate\css\material\icon\iconfont\README.md" />
+    <Content Include="AppTemplate\plugins\.DS_Store" />
+    <Content Include="AppTemplate\plugins\loading-overlay\js\loadingoverlay.min.js.map" />
+    <Content Include="AppTemplate\plugins\moment\CHANGELOG.md" />
+    <Content Include="AppTemplate\plugins\moment\LICENSE" />
+    <Content Include="AppTemplate\plugins\moment\min\locales.min.js.map" />
+    <Content Include="AppTemplate\plugins\moment\min\moment-with-locales.min.js.map" />
+    <Content Include="AppTemplate\plugins\moment\min\moment.min.js.map" />
+    <Content Include="AppTemplate\plugins\moment\package.json" />
+    <Content Include="AppTemplate\plugins\moment\README.md" />
+    <Content Include="AppTemplate\plugins\nvd3\build\nv.d3.js.map" />
+    <Content Include="AppTemplate\plugins\nvd3\build\nv.d3.min.css.map" />
+    <Content Include="AppTemplate\plugins\nvd3\build\nv.d3.min.js.map" />
+    <Content Include="AppTemplate\webfonts\fa-brands-400.eot" />
+    <Content Include="AppTemplate\webfonts\fa-brands-400.ttf" />
+    <Content Include="AppTemplate\webfonts\fa-brands-400.woff" />
+    <Content Include="AppTemplate\webfonts\fa-brands-400.woff2" />
+    <Content Include="AppTemplate\webfonts\fa-regular-400.eot" />
+    <Content Include="AppTemplate\webfonts\fa-regular-400.ttf" />
+    <Content Include="AppTemplate\webfonts\fa-regular-400.woff" />
+    <Content Include="AppTemplate\webfonts\fa-regular-400.woff2" />
+    <Content Include="AppTemplate\webfonts\fa-solid-900.eot" />
+    <Content Include="AppTemplate\webfonts\fa-solid-900.ttf" />
+    <Content Include="AppTemplate\webfonts\fa-solid-900.woff" />
+    <Content Include="AppTemplate\webfonts\fa-solid-900.woff2" />
+    <None Include="packages.config" />
+    <Content Include="ReportTemplate\AlarmReport.xlsx" />
+    <Content Include="ReportTemplate\DataReport.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="AppTemplate\plugins\moment\moment.d.ts" />
+    <TypeScriptCompile Include="AppTemplate\plugins\moment\ts3.1-typings\moment.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ATSCADAWebApp.Component\ATSCADAWebApp.Component.csproj">
+      <Project>{061508eb-7256-433e-9f66-66762d4ef1aa}</Project>
+      <Name>ATSCADAWebApp.Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATSCADAWebApp.Core\ATSCADAWebApp.Core.csproj">
+      <Project>{5e377be7-a10f-4056-8164-4f1294f12594}</Project>
+      <Name>ATSCADAWebApp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATSCADAWebApp.Database\ATSCADAWebApp.Database.csproj">
+      <Project>{d6842c65-b380-4e6d-8f08-a0a09e9738c1}</Project>
+      <Name>ATSCADAWebApp.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATSCADAWebApp.Export\ATSCADAWebApp.Export.csproj">
+      <Project>{aeea2c49-61a3-429d-865c-c5376888fc37}</Project>
+      <Name>ATSCADAWebApp.Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATSCADAWebApp.Model\ATSCADAWebApp.Model.csproj">
+      <Project>{bfe411f7-9d3f-49d7-a71e-70901e07a66e}</Project>
+      <Name>ATSCADAWebApp.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATSCADAWebApp.Service\ATSCADAWebApp.Service.csproj">
+      <Project>{326d848f-4857-4f6f-9721-7976b971695a}</Project>
+      <Name>ATSCADAWebApp.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59339</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44367/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<atscada-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" at-title="ATSCADA" at-brand="ATSCADA" at-author="ATSCADA LAB" at-dark-mode="true">
+  <at-component-name>NewApplication</at-component-name>
+  <at-component-description>DIGITAL TRANSFORMATION</at-component-description>
+  <atscada-components></atscada-components>
+  <at-authentication at-connection="atscada" at-table-name="useraccount" at-required="true"></at-authentication>
+  <at-service at-address="localhost" at-port="8010"></at-service>
+</atscada-app>

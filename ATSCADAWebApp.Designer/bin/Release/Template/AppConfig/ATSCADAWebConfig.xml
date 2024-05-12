@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<atscada-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" at-title="ATSCADA" at-brand="ATSCADA" at-author="ATSCADA LAB" at-dark-mode="true" at-authentication-connection="atscada" at-authentication-table-name="useraccount" at-authentication-required="false">
+  <at-component-name>ATSCADAWebApplication</at-component-name>
+  <at-component-description>DIGITAL TRANSFORMATION</at-component-description>
+  <atscada-components>
+    <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAView, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <atscada-view at-content="Layout" at-location="layout" at-icon="dashboard" at-roles="Admin, Operator" at-interval="1000" at-max-number-of-write="10" at-timeout="3000">
+        <at-component-name>Layout</at-component-name>
+        <at-component-description>ATSCADA Fast Web Component</at-component-description>
+        <atscada-components>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowCard</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColCard</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="Value 1" at-data-tag-name="FastWeb.Value1" at-color="#2196F3" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>Value1</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="Value 2" at-data-tag-name="FastWeb.Value2" at-color="#00BCD4" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>Value2</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="Value 3" at-data-tag-name="FastWeb.Value3" at-color="#FF9800" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>Value3</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="Value 4" at-data-tag-name="FastWeb.Value4" at-color="#F44336" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>Value4</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowChart</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColChart</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Chart.ATSCADAChart, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-chart at-content="Line Chart" at-type="line" at-height="250px" at-sample-num="100" at-xlabel="Time" at-ylabel="Value" at-grid-column="col-sm-4">
+                          <at-component-name>LineChart</at-component-name>
+                          <at-component-description>Chart - ATSCADA Web Component</at-component-description>
+                          <atscada-chart-item at-name="Value1" at-content="Value 1" at-data-tag-name="FastWeb.Value1" at-color="#2196F3"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value2" at-content="Value 2" at-data-tag-name="FastWeb.Value2" at-color="#00BCD4"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value3" at-content="Value 3" at-data-tag-name="FastWeb.Value3" at-color="#FF9800"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value4" at-content="Value 4" at-data-tag-name="FastWeb.Value4" at-color="#F44336"></atscada-chart-item>
+                        </atscada-chart>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Chart.ATSCADAChart, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-chart at-content="Bar Chart" at-type="bar" at-height="250px" at-sample-num="50" at-xlabel="Time" at-ylabel="Value" at-grid-column="col-sm-4">
+                          <at-component-name>BarChar</at-component-name>
+                          <at-component-description>Chart - ATSCADA Web Component</at-component-description>
+                          <atscada-chart-item at-name="Value1" at-content="Value 1" at-data-tag-name="FastWeb.Value1" at-color="#2196F3"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value2" at-content="Value 2" at-data-tag-name="FastWeb.Value2" at-color="#00BCD4"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value3" at-content="Value 3" at-data-tag-name="FastWeb.Value3" at-color="#FF9800"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value4" at-content="Value 4" at-data-tag-name="FastWeb.Value4" at-color="#F44336"></atscada-chart-item>
+                        </atscada-chart>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Chart.ATSCADAChart, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-chart at-content="Donut Chart" at-type="donut" at-height="250px" at-sample-num="50" at-xlabel="Time" at-ylabel="Value" at-grid-column="col-sm-4">
+                          <at-component-name>DonutChart</at-component-name>
+                          <at-component-description>Chart - ATSCADA Web Component</at-component-description>
+                          <atscada-chart-item at-name="Value1" at-content="Value 1" at-data-tag-name="FastWeb.Value1" at-color="#2196F3"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value2" at-content="Value 2" at-data-tag-name="FastWeb.Value2" at-color="#00BCD4"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value3" at-content="Value 3" at-data-tag-name="FastWeb.Value3" at-color="#FF9800"></atscada-chart-item>
+                          <atscada-chart-item at-name="Value4" at-content="Value 4" at-data-tag-name="FastWeb.Value4" at-color="#F44336"></atscada-chart-item>
+                        </atscada-chart>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowAlarmViewer</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColAlarmViewer</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.AlarmViewer.ATSCADAAlarmViewer, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-alarm-viewer at-content="Alarm Viewer" at-connection="atscada" at-table-name="alarmlog" at-limit="50" at-interval="3000" at-timeout="30000" at-grid-column="col-sm-12">
+                          <at-component-name>AlarmViewer</at-component-name>
+                          <at-component-description>AlarmViewer - ATSCADA Web Component</at-component-description>
+                        </atscada-alarm-viewer>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+        </atscada-components>
+      </atscada-view>
+    </atscada-assembly>
+    <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAView, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <atscada-view at-content="Report" at-location="report" at-icon="analytics" at-roles="Admin" at-interval="1000" at-max-number-of-write="10" at-timeout="3000">
+        <at-component-name>Report</at-component-name>
+        <at-component-description>ATSCADA Fast Web Component</at-component-description>
+        <atscada-components>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowDataReport</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColDataReport</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.DataReporter.ATSCADADataReporter, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-data-reporter at-content="Data Reporter - Status" at-connection="atscada" at-table-name="datalog" at-timeout="30000" at-grid-column="col-sm-12">
+                          <at-component-name>DataReporterStatus</at-component-name>
+                          <at-component-description>DataReporter - ATSCADA Web Component</at-component-description>
+                          <atscada-data-reporter-item at-name="Status1" at-alias="Status 1" at-color="#008080"></atscada-data-reporter-item>
+                          <atscada-data-reporter-item at-name="Status2" at-alias="Status 2" at-color="#008080"></atscada-data-reporter-item>
+                          <atscada-data-reporter-item at-name="Status3" at-alias="Status 3" at-color="#008080"></atscada-data-reporter-item>
+                          <atscada-data-reporter-item at-name="Status4" at-alias="Status 4" at-color="#008080"></atscada-data-reporter-item>
+                        </atscada-data-reporter>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.DataReporter.ATSCADADataReporter, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-data-reporter at-content="Data Reporter - Value" at-connection="atscada" at-table-name="datalog" at-timeout="30000" at-grid-column="col-sm-12">
+                          <at-component-name>DataReporterValue</at-component-name>
+                          <at-component-description>DataReporter - ATSCADA Web Component</at-component-description>
+                          <atscada-data-reporter-item at-name="Value1" at-alias="Value 1" at-color="#008080"></atscada-data-reporter-item>
+                          <atscada-data-reporter-item at-name="Value2" at-alias="Value 2" at-color="#008080"></atscada-data-reporter-item>
+                          <atscada-data-reporter-item at-name="Value3" at-alias="Value 3" at-color="#008080"></atscada-data-reporter-item>
+                          <atscada-data-reporter-item at-name="Value4" at-alias="Value 4" at-color="#008080"></atscada-data-reporter-item>
+                        </atscada-data-reporter>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowAlarmReport</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColAlarmReport</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.AlarmReporter.ATSCADAAlarmReporter, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-alarm-reporter at-content="Alarm Reporter" at-connection="atscada" at-table-name="alarmlog" at-timeout="30000" at-grid-column="col-sm-12">
+                          <at-component-name>AlarmReporter</at-component-name>
+                          <at-component-description>AlarmReporter - ATSCADA Web Component</at-component-description>
+                        </atscada-alarm-reporter>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+        </atscada-components>
+      </atscada-view>
+    </atscada-assembly>
+    <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAView, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <atscada-view at-content="Settings" at-location="settings" at-icon="settings" at-roles="Admin" at-interval="1000" at-max-number-of-write="10" at-timeout="3000">
+        <at-component-name>Settings</at-component-name>
+        <at-component-description>ATSCADA Fast Web Component</at-component-description>
+        <atscada-components>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowSwitch</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColSwitch</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Switch.ATSCADASwitch, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-switch at-content="Status 1" at-data-tag-name="FastWeb.Status1" at-color="#008080" at-size="default" at-value-on="1" at-value-off="0" at-grid-column="col-sm-3">
+                          <at-component-name>Status1</at-component-name>
+                          <at-component-description>Switch - ATSCADA Web Component</at-component-description>
+                        </atscada-switch>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Switch.ATSCADASwitch, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-switch at-content="Status 2" at-data-tag-name="FastWeb.Status2" at-color="#008080" at-size="default" at-value-on="1" at-value-off="0" at-grid-column="col-sm-3">
+                          <at-component-name>Status2</at-component-name>
+                          <at-component-description>Switch - ATSCADA Web Component</at-component-description>
+                        </atscada-switch>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Switch.ATSCADASwitch, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-switch at-content="Status 3" at-data-tag-name="FastWeb.Status3" at-color="#008080" at-size="default" at-value-on="1" at-value-off="0" at-grid-column="col-sm-3">
+                          <at-component-name>Status3</at-component-name>
+                          <at-component-description>Switch - ATSCADA Web Component</at-component-description>
+                        </atscada-switch>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Switch.ATSCADASwitch, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-switch at-content="Status 4" at-data-tag-name="FastWeb.Status4" at-color="#008080" at-size="default" at-value-on="1" at-value-off="0" at-grid-column="col-sm-3">
+                          <at-component-name>Status4</at-component-name>
+                          <at-component-description>Switch - ATSCADA Web Component</at-component-description>
+                        </atscada-switch>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowSlider</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColSlider</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Slider.ATSCADASlider, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-slider at-content="Value 1" at-data-tag-name="FastWeb.Value1" at-min="0" at-max="100" at-step="1" at-skin="big" at-grid-column="col-sm-3">
+                          <at-component-name>Value1</at-component-name>
+                          <at-component-description>Slider - ATSCADA Web Component</at-component-description>
+                        </atscada-slider>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Slider.ATSCADASlider, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-slider at-content="Value 2" at-data-tag-name="FastWeb.Value2" at-min="0" at-max="100" at-step="1" at-skin="big" at-grid-column="col-sm-3">
+                          <at-component-name>Value2</at-component-name>
+                          <at-component-description>Slider - ATSCADA Web Component</at-component-description>
+                        </atscada-slider>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Slider.ATSCADASlider, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-slider at-content="Value 3" at-data-tag-name="FastWeb.Value3" at-min="0" at-max="100" at-step="1" at-skin="big" at-grid-column="col-sm-3">
+                          <at-component-name>Value3</at-component-name>
+                          <at-component-description>Slider - ATSCADA Web Component</at-component-description>
+                        </atscada-slider>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Slider.ATSCADASlider, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-slider at-content="Value 4" at-data-tag-name="FastWeb.Value4" at-min="0" at-max="100" at-step="1" at-skin="big" at-grid-column="col-sm-3">
+                          <at-component-name>Value4</at-component-name>
+                          <at-component-description>Slider - ATSCADA Web Component</at-component-description>
+                        </atscada-slider>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>RowInput</at-component-name>
+              <at-component-description>ATSCADA Fast Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>ColInput</at-component-name>
+                    <at-component-description>ATSCADA Fast Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Input.ATSCADAInput, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-attribute at-content="Value 1" at-data-tag-name="FastWeb.Value1" at-grid-column="col-sm-3">
+                          <at-component-name>Value1</at-component-name>
+                          <at-component-description>Input - ATSCADA Web Component</at-component-description>
+                        </atscada-attribute>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Input.ATSCADAInput, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-attribute at-content="Value 2" at-data-tag-name="FastWeb.Value2" at-grid-column="col-sm-3">
+                          <at-component-name>Value2</at-component-name>
+                          <at-component-description>Input - ATSCADA Web Component</at-component-description>
+                        </atscada-attribute>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Input.ATSCADAInput, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-attribute at-content="Value 3" at-data-tag-name="FastWeb.Value3" at-grid-column="col-sm-3">
+                          <at-component-name>Value3</at-component-name>
+                          <at-component-description>Input - ATSCADA Web Component</at-component-description>
+                        </atscada-attribute>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Input.ATSCADAInput, ATSCADAFastWeb.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-attribute at-content="Value 4" at-data-tag-name="FastWeb.Value4" at-grid-column="col-sm-3">
+                          <at-component-name>Value4</at-component-name>
+                          <at-component-description>Input - ATSCADA Web Component</at-component-description>
+                        </atscada-attribute>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+        </atscada-components>
+      </atscada-view>
+    </atscada-assembly>
+    <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAHyperlinkView, ATSCADAFastWeb.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <atscada-hyperlink-view at-content="Redirect" at-location="redirect" at-icon="link" at-roles="Admin, Operator" at-link="http://atscada.com" at-delay="5">
+        <at-component-name>Redirect</at-component-name>
+        <at-component-description>ATSCADA Fast Web Component</at-component-description>
+      </atscada-hyperlink-view>
+    </atscada-assembly>
+  </atscada-components>
+</atscada-app>

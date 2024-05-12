@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E377BE7-A10F-4056-8164-4F1294F12594}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATSCADAWebApp.Core</RootNamespace>
+    <AssemblyName>ATSCADAFastWeb.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\ATSCADAApp.cs" />
+    <Compile Include="App\ATSCADAAppEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\ATSCADAAppEditor.Designer.cs">
+      <DependentUpon>ATSCADAAppEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\ATSCADAAppAuthentication.cs" />
+    <Compile Include="App\ATSCADAAppService.cs" />
+    <Compile Include="View\ATSCADAHyperlinkView.cs" />
+    <Compile Include="View\ATSCADAHyperlinkViewEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ATSCADAHyperlinkViewEditor.Designer.cs">
+      <DependentUpon>ATSCADAHyperlinkViewEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BindableCollection.cs" />
+    <Compile Include="BindableCore.cs" />
+    <Compile Include="Column\ATSCADAColumn.cs" />
+    <Compile Include="Column\ATSCADAColumnEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Column\ATSCADAColumnEditor.Designer.cs">
+      <DependentUpon>ATSCADAColumnEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentBase.cs" />
+    <Compile Include="ComponentServiceBase.cs" />
+    <Compile Include="CompositeBase.cs" />
+    <Compile Include="ComponentLevel.cs" />
+    <Compile Include="Interfaces\IATSCADAApp.cs" />
+    <Compile Include="Interfaces\IATSCADAColumn.cs" />
+    <Compile Include="Interfaces\IATSCADARow.cs" />
+    <Compile Include="Interfaces\IATSCADAView.cs" />
+    <Compile Include="Interfaces\IComponent.cs" />
+    <Compile Include="Interfaces\IComponentService.cs" />
+    <Compile Include="Interfaces\IDefaultableObject.cs" />
+    <Compile Include="Interfaces\ISupportRender.cs" />
+    <Compile Include="CollectionSerializer.cs" />
+    <Compile Include="Interfaces\IComposite.cs" />
+    <Compile Include="Interfaces\ISupportGrid.cs" />
+    <Compile Include="Row\ATSCADARow.cs" />
+    <Compile Include="Row\ATSCADARowEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Row\ATSCADARowEditor.Designer.cs">
+      <DependentUpon>ATSCADARowEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompositeSerializer.cs" />
+    <Compile Include="CompositeWriter.cs" />
+    <Compile Include="Interfaces\ICompositeSerializer.cs" />
+    <Compile Include="View\ATSCADAView.cs" />
+    <Compile Include="View\ATSCADAViewEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ATSCADAViewEditor.Designer.cs">
+      <DependentUpon>ATSCADAViewEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App\ATSCADAAppEditor.resx">
+      <DependentUpon>ATSCADAAppEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Column\ATSCADAColumnEditor.resx">
+      <DependentUpon>ATSCADAColumnEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ATSCADAHyperlinkViewEditor.resx">
+      <DependentUpon>ATSCADAHyperlinkViewEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Row\ATSCADARowEditor.resx">
+      <DependentUpon>ATSCADARowEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ATSCADAViewEditor.resx">
+      <DependentUpon>ATSCADAViewEditor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

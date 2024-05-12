@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<atscada-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" at-title="ATSCADA" at-brand="ATSCADA" at-author="ATSCADA" at-authentication-connection="atscada" at-authentication-table-name="useraccount">
+  <at-component-name>NewApplication</at-component-name>
+  <at-component-description>ATSCADA Web Component</at-component-description>
+  <atscada-components>
+    <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAView, ATSCADAWebApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <atscada-view at-content="Home" at-location="home" at-icon="home" at-interval="1000" at-max-number-of-write="10" at-timeout="3000" at-roles="Admin, Operator">
+        <at-component-name>NewView</at-component-name>
+        <at-component-description>ATSCADA Web Component</at-component-description>
+        <atscada-components>
+          <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADARow, ATSCADAWebApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <atscada-row>
+              <at-component-name>NewRow</at-component-name>
+              <at-component-description>ATSCADA Web Component</at-component-description>
+              <atscada-components>
+                <atscada-assembly at-value="ATSCADAWebApp.Core.ATSCADAColumn, ATSCADAWebApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <atscada-column at-grid-column="col-sm-12">
+                    <at-component-name>NewColumn</at-component-name>
+                    <at-component-description>ATSCADA Web Component</at-component-description>
+                    <atscada-components>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="GocVanCung1" at-data-tag-name="ThongSo.GocVanCung1" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>GocVanCung1</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="GocVanCung2" at-data-tag-name="ThongSo.GocVanCung2" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>GocVanCung2</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="GocVanCung3" at-data-tag-name="ThongSo.GocVanCung3" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>GocVanCung3</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="GocVanCung4" at-data-tag-name="ThongSo.GocVanCung4" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>GocVanCung4</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="GocVanCung5" at-data-tag-name="ThongSo.GocVanCung5" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>GocVanCung5</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="GocVanCung6" at-data-tag-name="ThongSo.GocVanCung6" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>GocVanCung6</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="MucNuocThuongLuu" at-data-tag-name="ThongSo.MucNuocThuongLuu" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>MucNuocThuongLuu</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="CongSuat1" at-data-tag-name="ThongSo.CongSuat1" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>CongSuat1</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="CongSuat2" at-data-tag-name="ThongSo.CongSuat2" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>CongSuat2</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="MucNuocHaLuu" at-data-tag-name="CaiDat.MucNuocHaLuu" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>MucNuocHaLuu</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="DoMoVan" at-data-tag-name="CaiDat.DoMoVan" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>DoMoVan</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="CheDoNhaMay" at-data-tag-name="CaiDat.CheDoNhaMay" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>CheDoNhaMay</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="CheDoQuaTran" at-data-tag-name="CaiDat.CheDoQuaTran" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>CheDoQuaTran</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="CheDoDongChayToiThieu" at-data-tag-name="CaiDat.CheDoDongChayToiThieu" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>CheDoDongChayToiThieu</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="NhaMay" at-data-tag-name="LuuLuong.NhaMay" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>NhaMay</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="QuaTran" at-data-tag-name="LuuLuong.QuaTran" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>QuaTran</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                      <atscada-assembly at-value="ATSCADAWebApp.Component.Card.ATSCADACard, ATSCADAWebApp.Component, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <atscada-card at-content="DongChayToiThieu" at-data-tag-name="LuuLuong.DongChayToiThieu" at-color="#008080" at-icon="fa fa-globe fa-fw" at-decimal-places="2" at-grid-column="col-sm-3">
+                          <at-component-name>DongChayToiThieu</at-component-name>
+                          <at-component-description>Card - ATSCADA Web Component</at-component-description>
+                        </atscada-card>
+                      </atscada-assembly>
+                    </atscada-components>
+                  </atscada-column>
+                </atscada-assembly>
+              </atscada-components>
+            </atscada-row>
+          </atscada-assembly>
+        </atscada-components>
+      </atscada-view>
+    </atscada-assembly>
+  </atscada-components>
+</atscada-app>
