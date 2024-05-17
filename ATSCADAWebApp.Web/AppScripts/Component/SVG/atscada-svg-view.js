@@ -144,27 +144,49 @@
     // Hàm `ValueChanged(value, item, index)` được gọi khi giá trị của một mục thay đổi
     ValueChanged(value, item, index) {
         // Kiểm tra nếu giá trị là null hoặc undefined, thoát khỏi hàm
-        if (!value) return;
+        if (!value) {
+            //if (item.properties === "Status") {
+            //    this.statusText = document.getElementById(item.id);
+            //    if (item.value != null) {
+            //        this.statusText.innerHTML = "GOOD";
+            //    }
+            //    else {
+            //        this.statusText.innerHTML = "BAD";
+            //    }
+            //}
+            return;
+        }
+        //else {
+        //    if (item.properties === "Status") {
+        //        this.statusText = document.getElementById(item.id);
+        //        if (item.value != null) {
+        //            this.statusText.innerHTML = "GOOD";
+        //        }
+        //        else {
+        //            this.statusText.innerHTML = "BAD";
+        //        }
+        //    }
+        //};
 
         // Xử lý các trường hợp tùy thuộc vào thuộc tính của mục (item)
         if (item.properties === "Value") {
             // Nếu thuộc tính là "Value", chuyển đổi giá trị và hiển thị lên giao diện
             this.roundValue = this.convertValue(value, item.type);
-            this.pressure1Text = document.getElementById(item.id);
-            this.pressure1Text.innerHTML = this.roundValue;
+            this.valueText = document.getElementById(item.id);
+            this.valueText.innerHTML = this.roundValue;
         } else if (item.properties === "Status") {
             // Nếu thuộc tính là "Status"
-            this.elemetStatus = document.getElementById(item.id);
+            this.elemetAnimetion = document.getElementById(item.id);
             if (item.type === "Color") {
                 // Nếu kiểu là "Color", thay đổi màu sắc dựa trên giá trị
-                this.elemetStatus.style.fill = value === "1" ? "red" : "green";
+                this.elemetAnimetion.style.fill = value === "1" ? "red" : "green";
             }
             if (item.type === "Blink") {
                 // Nếu kiểu là "Blink", áp dụng hiệu ứng nhấp nháy
                 if (value === "1") {
-                    this.applyBlinkEffect(this.elemetStatus);
+                    this.applyBlinkEffect(this.elemetAnimetion);
                 } else {
-                    this.removeBlinkEffect(this.elemetStatus);
+                    this.removeBlinkEffect(this.elemetAnimetion);
                 }
             }
             if (item.type == "IsRunning") {

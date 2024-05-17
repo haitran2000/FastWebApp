@@ -60,7 +60,6 @@ H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebA
 H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebApp.Extension\obj\Debug\ATSCADAFastWeb.Extension.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Extension\bin\Debug\ATSCADAFastWeb.Extension.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Extension\bin\Debug\ATSCADAFastWeb.Extension.pdb
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Extension\obj\Debug\ATSCADAWebApp.Extension.csproj.AssemblyReference.cache
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Extension\obj\Debug\ATSCADAWebApp.Extension.Color.TextBoxColor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Extension\obj\Debug\ATSCADAWebApp.ToolExtensions.TagCollection.SmartTagComboBox.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Extension\obj\Debug\ATSCADAWebApp.Extension.csproj.GenerateResource.cache

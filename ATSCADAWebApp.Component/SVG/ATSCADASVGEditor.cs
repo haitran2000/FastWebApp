@@ -91,9 +91,9 @@ namespace ATSCADAWebApp.Component.SVG
             this.lstvSVGValueItem.Items.Clear();
             foreach (var item in this.component.Items)
             {
-                var listViewItem = this.lstvSVGValueItem.Items.Add(new ListViewItem(new string[3]
+                var listViewItem = this.lstvSVGValueItem.Items.Add(new ListViewItem(new string[4]
                 {
-                    item.Name, item.DataTagName,item.Properties
+                    item.Name, item.DataTagName,item.Properties,item.Type
                 }));
 
                 listViewItem.UseItemStyleForSubItems = false;
@@ -106,7 +106,7 @@ namespace ATSCADAWebApp.Component.SVG
             {
                 var listViewItem = this.lstvSVGAlarmItem.Items.Add(new ListViewItem(new string[4]
                 {
-                    item.Name, item.DataTagName,item.LowAlarm,item.HighAlarm
+                    item.Name, item.DataTagName,item.HighAlarm,item.LowAlarm
                 }));
 
                 listViewItem.UseItemStyleForSubItems = false;
@@ -117,9 +117,9 @@ namespace ATSCADAWebApp.Component.SVG
             this.lstvSVGCutawayItem.Items.Clear();
             foreach (var item in this.component.ItemsCutaway)
             {
-                var listViewItem = this.lstvSVGCutawayItem.Items.Add(new ListViewItem(new string[4]
+                var listViewItem = this.lstvSVGCutawayItem.Items.Add(new ListViewItem(new string[5]
                 {
-                    item.Name, item.DataTagName,item.Min,item.Max
+                    item.Name,item.ID2, item.DataTagName,item.Min,item.Max
                 }));
 
                 listViewItem.UseItemStyleForSubItems = false;

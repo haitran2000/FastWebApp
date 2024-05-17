@@ -13,14 +13,19 @@ template.innerHTML = `
             </div>
             <div class="col-sm-3">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-3">
                         <button title="Report" type="button" class="atscada-data-reporter-report btn btn-default w-100" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                             Report
                         </button>
                     </div>
-                    <div class="col-sm-6">
-                        <button title="Export" type="button" class="atscada-data-reporter-export btn btn-default w-100" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" disabled>
-                            Export
+                    <div class="col-sm-5">
+                        <button title="Export Excel" type="button" class="atscada-data-reporter-export btn btn-default w-100" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" disabled>
+                            Export Excel
+                        </button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button title="PDF" type="button" class="atscada-data-reporter-export-pdf btn btn-default w-100" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            Export PDF
                         </button>
                     </div>
                 </div>
@@ -68,7 +73,8 @@ class AtscadaDataReporterElement extends HTMLElement {
         this.reportButtonElement = this.querySelector('.atscada-data-reporter-report');
          // Button xuat excel (sau khi da Report)
         this.exportButtonElement = this.querySelector('.atscada-data-reporter-export');
-
+        this.exportPDFButtonElement = this.querySelector('.atscada-data-reporter-export-pdf');
+        
         this.id = AtscadaDataReporterElement.getId();
         this.content = 'Data Report';
         this.connection = 'atscada';

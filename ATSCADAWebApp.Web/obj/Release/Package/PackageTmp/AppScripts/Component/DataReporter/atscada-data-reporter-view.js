@@ -17,6 +17,7 @@ export class AtscadaDataReporterView {
         this.reportButtonElement = element.reportButtonElement;
         // Button export. Xuat file excel
         this.exportButtonElement = element.exportButtonElement;
+        this.exportPDFButtonElement = element.exportPDFButtonElement;
     }
 
     async initialize() {
@@ -34,12 +35,14 @@ export class AtscadaDataReporterView {
         this.reportButtonElement.addEventListener('click', async () => await this.actionReportButtonClicked());
         // 2. Su kien bam nut Export
         this.exportButtonElement.addEventListener('click', () => this.actionExportButtonClicked());
+        this.exportPDFButtonElement.addEventListener('click', () => this.actionExportPDFButtonClicked());
     }
 
     // Cap nhat du lieu len DataTable
     actionReported(dataReportLogs) {
         this.dataTableElement.update(dataReportLogs);
-        this.exportButtonElement.disabled = dataReportLogs.length < 1;        
+        this.exportButtonElement.disabled = dataReportLogs.length < 1;
+        this.exportPDFButtonElement.disable = dataReportLogs.length < 1;
     }
 
     // call action model
@@ -57,6 +60,8 @@ export class AtscadaDataReporterView {
     actionExportButtonClicked() {
         this.dispatcher.dispatch('exportButtonClicked', {});
     }
-
+    actionExportPDFButtonClicked() {
+        this.dispatcher.dispatch('exportPDFButtonClicked', {});
+    }
     dispose() { }
 }

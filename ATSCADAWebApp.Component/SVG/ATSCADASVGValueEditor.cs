@@ -195,12 +195,20 @@ namespace ATSCADAWebApp.Component.SVGValue
                 cbbType.Items.AddRange(items);
                 cbbType.SelectedIndex = 0;
             }
-            else
+            if (this.cbbProperties.SelectedItem.ToString() == "Animation")
             {
                 cbbType.Items.Clear();
                 string[] items = {  "Color",
                                     "Blink",
                                     "IsRunning"
+                                    };
+                cbbType.Items.AddRange(items);
+                cbbType.SelectedIndex = 0;
+            }
+            else
+            {
+                cbbType.Items.Clear();
+                string[] items = {"Color",
                                     };
                 cbbType.Items.AddRange(items);
                 cbbType.SelectedIndex = 0;

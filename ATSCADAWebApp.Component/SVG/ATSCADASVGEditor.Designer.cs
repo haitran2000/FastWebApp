@@ -30,62 +30,81 @@ namespace ATSCADAWebApp.Component.SVG
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ATSCADASVGEditor));
-            this.tabElement = new System.Windows.Forms.TabControl();
+            this.btnEditHyperLink = new System.Windows.Forms.TabControl();
             this.tabBase = new System.Windows.Forms.TabPage();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pageExtend = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabAddValue = new System.Windows.Forms.TabPage();
+            this.lstvSVGValueItem = new System.Windows.Forms.ListView();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.tabAlarm = new System.Windows.Forms.TabPage();
+            this.lstvSVGAlarmItem = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabCutaway = new System.Windows.Forms.TabPage();
+            this.lstvSVGCutawayItem = new System.Windows.Forms.ListView();
+            this.btnEditCutaway = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.btnPickColor = new System.Windows.Forms.Button();
             this.txtColor = new ATSCADAWebApp.Extension.Color.TextBoxColor();
             this.lblColor = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtSelectedFile = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabAddValue = new System.Windows.Forms.TabPage();
-            this.lstvSVGValueItem = new System.Windows.Forms.ListView();
-            this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTagName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colProperties = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.tabAlarm = new System.Windows.Forms.TabPage();
-            this.lstvSVGAlarmItem = new System.Windows.Forms.ListView();
-            this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTagLowName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTagHighName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.filePicker = new System.Windows.Forms.OpenFileDialog();
-            this.tabCutaway = new System.Windows.Forms.TabPage();
-            this.lstvSVGCutawayItem = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnEditCutaway = new System.Windows.Forms.Button();
-            this.tabElement.SuspendLayout();
+            this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTagLowName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTagHighName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTagName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colProperties = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TagName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Properties = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnEditHyperLink.SuspendLayout();
             this.tabBase.SuspendLayout();
             this.pageExtend.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tabAddValue.SuspendLayout();
             this.tabAlarm.SuspendLayout();
             this.tabCutaway.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabElement
+            // btnEditHyperLink
             // 
-            this.tabElement.Controls.Add(this.tabBase);
-            this.tabElement.Controls.Add(this.pageExtend);
-            this.tabElement.Controls.Add(this.tabAddValue);
-            this.tabElement.Controls.Add(this.tabAlarm);
-            this.tabElement.Controls.Add(this.tabCutaway);
-            this.tabElement.Location = new System.Drawing.Point(8, 8);
-            this.tabElement.Name = "tabElement";
-            this.tabElement.SelectedIndex = 0;
-            this.tabElement.Size = new System.Drawing.Size(704, 284);
-            this.tabElement.TabIndex = 0;
+            this.btnEditHyperLink.Controls.Add(this.tabBase);
+            this.btnEditHyperLink.Controls.Add(this.pageExtend);
+            this.btnEditHyperLink.Location = new System.Drawing.Point(8, 12);
+            this.btnEditHyperLink.Name = "btnEditHyperLink";
+            this.btnEditHyperLink.SelectedIndex = 0;
+            this.btnEditHyperLink.Size = new System.Drawing.Size(1265, 716);
+            this.btnEditHyperLink.TabIndex = 0;
             // 
             // tabBase
             // 
@@ -96,7 +115,7 @@ namespace ATSCADAWebApp.Component.SVG
             this.tabBase.Location = new System.Drawing.Point(4, 26);
             this.tabBase.Name = "tabBase";
             this.tabBase.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBase.Size = new System.Drawing.Size(696, 254);
+            this.tabBase.Size = new System.Drawing.Size(1257, 686);
             this.tabBase.TabIndex = 2;
             this.tabBase.Text = "Base";
             this.tabBase.UseVisualStyleBackColor = true;
@@ -106,7 +125,7 @@ namespace ATSCADAWebApp.Component.SVG
             this.txtDescription.Location = new System.Drawing.Point(95, 40);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(581, 208);
+            this.txtDescription.Size = new System.Drawing.Size(1156, 640);
             this.txtDescription.TabIndex = 5;
             // 
             // lblDescription
@@ -122,7 +141,7 @@ namespace ATSCADAWebApp.Component.SVG
             // 
             this.txtName.Location = new System.Drawing.Point(95, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(581, 23);
+            this.txtName.Size = new System.Drawing.Size(1156, 23);
             this.txtName.TabIndex = 4;
             // 
             // lblName
@@ -136,6 +155,7 @@ namespace ATSCADAWebApp.Component.SVG
             // 
             // pageExtend
             // 
+            this.pageExtend.Controls.Add(this.tabControl1);
             this.pageExtend.Controls.Add(this.btnPickColor);
             this.pageExtend.Controls.Add(this.txtColor);
             this.pageExtend.Controls.Add(this.lblColor);
@@ -145,10 +165,184 @@ namespace ATSCADAWebApp.Component.SVG
             this.pageExtend.Location = new System.Drawing.Point(4, 26);
             this.pageExtend.Name = "pageExtend";
             this.pageExtend.Padding = new System.Windows.Forms.Padding(3);
-            this.pageExtend.Size = new System.Drawing.Size(696, 254);
+            this.pageExtend.Size = new System.Drawing.Size(1257, 686);
             this.pageExtend.TabIndex = 1;
             this.pageExtend.Text = "Extend";
             this.pageExtend.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabAddValue);
+            this.tabControl1.Controls.Add(this.tabAlarm);
+            this.tabControl1.Controls.Add(this.tabCutaway);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(24, 94);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1214, 586);
+            this.tabControl1.TabIndex = 35;
+            // 
+            // tabAddValue
+            // 
+            this.tabAddValue.Controls.Add(this.lstvSVGValueItem);
+            this.tabAddValue.Controls.Add(this.btnEdit);
+            this.tabAddValue.Location = new System.Drawing.Point(4, 26);
+            this.tabAddValue.Name = "tabAddValue";
+            this.tabAddValue.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAddValue.Size = new System.Drawing.Size(1206, 556);
+            this.tabAddValue.TabIndex = 3;
+            this.tabAddValue.Text = "Value";
+            this.tabAddValue.UseVisualStyleBackColor = true;
+            // 
+            // lstvSVGValueItem
+            // 
+            this.lstvSVGValueItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.TagName,
+            this.Properties,
+            this.Type});
+            this.lstvSVGValueItem.FullRowSelect = true;
+            this.lstvSVGValueItem.GridLines = true;
+            this.lstvSVGValueItem.HideSelection = false;
+            this.lstvSVGValueItem.Location = new System.Drawing.Point(6, 40);
+            this.lstvSVGValueItem.Margin = new System.Windows.Forms.Padding(4);
+            this.lstvSVGValueItem.Name = "lstvSVGValueItem";
+            this.lstvSVGValueItem.Size = new System.Drawing.Size(1196, 481);
+            this.lstvSVGValueItem.TabIndex = 11;
+            this.lstvSVGValueItem.UseCompatibleStateImageBehavior = false;
+            this.lstvSVGValueItem.View = System.Windows.Forms.View.Details;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(1099, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(100, 28);
+            this.btnEdit.TabIndex = 10;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // tabAlarm
+            // 
+            this.tabAlarm.Controls.Add(this.lstvSVGAlarmItem);
+            this.tabAlarm.Controls.Add(this.button1);
+            this.tabAlarm.Location = new System.Drawing.Point(4, 26);
+            this.tabAlarm.Name = "tabAlarm";
+            this.tabAlarm.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAlarm.Size = new System.Drawing.Size(1206, 556);
+            this.tabAlarm.TabIndex = 4;
+            this.tabAlarm.Text = "Alarm";
+            this.tabAlarm.UseVisualStyleBackColor = true;
+            // 
+            // lstvSVGAlarmItem
+            // 
+            this.lstvSVGAlarmItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            this.lstvSVGAlarmItem.FullRowSelect = true;
+            this.lstvSVGAlarmItem.GridLines = true;
+            this.lstvSVGAlarmItem.HideSelection = false;
+            this.lstvSVGAlarmItem.Location = new System.Drawing.Point(7, 47);
+            this.lstvSVGAlarmItem.Margin = new System.Windows.Forms.Padding(4);
+            this.lstvSVGAlarmItem.MultiSelect = false;
+            this.lstvSVGAlarmItem.Name = "lstvSVGAlarmItem";
+            this.lstvSVGAlarmItem.Size = new System.Drawing.Size(1192, 502);
+            this.lstvSVGAlarmItem.TabIndex = 19;
+            this.lstvSVGAlarmItem.UseCompatibleStateImageBehavior = false;
+            this.lstvSVGAlarmItem.View = System.Windows.Forms.View.Details;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1102, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tabCutaway
+            // 
+            this.tabCutaway.Controls.Add(this.lstvSVGCutawayItem);
+            this.tabCutaway.Controls.Add(this.btnEditCutaway);
+            this.tabCutaway.Location = new System.Drawing.Point(4, 26);
+            this.tabCutaway.Name = "tabCutaway";
+            this.tabCutaway.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCutaway.Size = new System.Drawing.Size(1206, 556);
+            this.tabCutaway.TabIndex = 5;
+            this.tabCutaway.Text = "Cutaway";
+            this.tabCutaway.UseVisualStyleBackColor = true;
+            // 
+            // lstvSVGCutawayItem
+            // 
+            this.lstvSVGCutawayItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17});
+            this.lstvSVGCutawayItem.FullRowSelect = true;
+            this.lstvSVGCutawayItem.GridLines = true;
+            this.lstvSVGCutawayItem.HideSelection = false;
+            this.lstvSVGCutawayItem.Location = new System.Drawing.Point(7, 47);
+            this.lstvSVGCutawayItem.Margin = new System.Windows.Forms.Padding(4);
+            this.lstvSVGCutawayItem.MultiSelect = false;
+            this.lstvSVGCutawayItem.Name = "lstvSVGCutawayItem";
+            this.lstvSVGCutawayItem.Size = new System.Drawing.Size(1192, 502);
+            this.lstvSVGCutawayItem.TabIndex = 21;
+            this.lstvSVGCutawayItem.UseCompatibleStateImageBehavior = false;
+            this.lstvSVGCutawayItem.View = System.Windows.Forms.View.Details;
+            // 
+            // btnEditCutaway
+            // 
+            this.btnEditCutaway.Location = new System.Drawing.Point(1099, 11);
+            this.btnEditCutaway.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditCutaway.Name = "btnEditCutaway";
+            this.btnEditCutaway.Size = new System.Drawing.Size(100, 28);
+            this.btnEditCutaway.TabIndex = 20;
+            this.btnEditCutaway.Text = "Edit";
+            this.btnEditCutaway.UseVisualStyleBackColor = true;
+            this.btnEditCutaway.Click += new System.EventHandler(this.btnEditCutaway_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.listView1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1206, 556);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "Hyper Link";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1099, 11);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "Edit";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(7, 47);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(1192, 505);
+            this.listView1.TabIndex = 22;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // btnPickColor
             // 
@@ -166,7 +360,7 @@ namespace ATSCADAWebApp.Component.SVG
             this.txtColor.Location = new System.Drawing.Point(140, 61);
             this.txtColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(169, 25);
+            this.txtColor.Size = new System.Drawing.Size(169, 26);
             this.txtColor.TabIndex = 17;
             // 
             // lblColor
@@ -208,38 +402,98 @@ namespace ATSCADAWebApp.Component.SVG
             this.label3.TabIndex = 8;
             this.label3.Text = "Load SVG";
             // 
-            // tabAddValue
+            // btnOK
             // 
-            this.tabAddValue.Controls.Add(this.lstvSVGValueItem);
-            this.tabAddValue.Controls.Add(this.btnEdit);
-            this.tabAddValue.Location = new System.Drawing.Point(4, 26);
-            this.tabAddValue.Name = "tabAddValue";
-            this.tabAddValue.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAddValue.Size = new System.Drawing.Size(696, 254);
-            this.tabAddValue.TabIndex = 3;
-            this.tabAddValue.Text = "Value";
-            this.tabAddValue.UseVisualStyleBackColor = true;
+            this.btnOK.Location = new System.Drawing.Point(1117, 730);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 9;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // lstvSVGValueItem
+            // btnCancel
             // 
-            this.lstvSVGValueItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colName,
-            this.colTagName,
-            this.colProperties});
-            this.lstvSVGValueItem.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lstvSVGValueItem.FullRowSelect = true;
-            this.lstvSVGValueItem.GridLines = true;
-            this.lstvSVGValueItem.HideSelection = false;
-            this.lstvSVGValueItem.Location = new System.Drawing.Point(3, 35);
-            this.lstvSVGValueItem.Margin = new System.Windows.Forms.Padding(4);
-            this.lstvSVGValueItem.Name = "lstvSVGValueItem";
-            this.lstvSVGValueItem.Size = new System.Drawing.Size(690, 216);
-            this.lstvSVGValueItem.TabIndex = 11;
-            this.lstvSVGValueItem.UseCompatibleStateImageBehavior = false;
-            this.lstvSVGValueItem.View = System.Windows.Forms.View.Details;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(1198, 730);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // filePicker
+            // 
+            this.filePicker.Filter = "SVG Files | *.SVG";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.DisplayIndex = 0;
+            this.columnHeader6.Text = "ID";
+            this.columnHeader6.Width = 81;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.DisplayIndex = 1;
+            this.columnHeader7.Text = "Tag name";
+            this.columnHeader7.Width = 125;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.DisplayIndex = 2;
+            this.columnHeader8.Text = "Type";
+            this.columnHeader8.Width = 146;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.DisplayIndex = 0;
+            this.columnHeader2.Text = "ID";
+            this.columnHeader2.Width = 81;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.DisplayIndex = 1;
+            this.columnHeader3.Text = "Tag name";
+            this.columnHeader3.Width = 125;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.DisplayIndex = 2;
+            this.columnHeader4.Text = "Min";
+            this.columnHeader4.Width = 146;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.DisplayIndex = 3;
+            this.columnHeader5.Text = "Max";
+            this.columnHeader5.Width = 259;
+            // 
+            // colID
+            // 
+            this.colID.DisplayIndex = 0;
+            this.colID.Text = "ID";
+            this.colID.Width = 81;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.DisplayIndex = 1;
+            this.columnHeader1.Text = "Tag name";
+            this.columnHeader1.Width = 125;
+            // 
+            // colTagLowName
+            // 
+            this.colTagLowName.DisplayIndex = 2;
+            this.colTagLowName.Text = "Low";
+            this.colTagLowName.Width = 146;
+            // 
+            // colTagHighName
+            // 
+            this.colTagHighName.DisplayIndex = 3;
+            this.colTagHighName.Text = "High";
+            this.colTagHighName.Width = 259;
             // 
             // colName
             // 
+            this.colName.DisplayIndex = 0;
             this.colName.Text = "ID";
             this.colName.Width = 113;
             // 
@@ -255,163 +509,70 @@ namespace ATSCADAWebApp.Component.SVG
             this.colProperties.Text = "Properties";
             this.colProperties.Width = 257;
             // 
-            // btnEdit
+            // ID
             // 
-            this.btnEdit.Location = new System.Drawing.Point(589, 4);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 28);
-            this.btnEdit.TabIndex = 10;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.ID.Text = "ID";
+            this.ID.Width = 297;
             // 
-            // tabAlarm
+            // TagName
             // 
-            this.tabAlarm.Controls.Add(this.lstvSVGAlarmItem);
-            this.tabAlarm.Controls.Add(this.button1);
-            this.tabAlarm.Location = new System.Drawing.Point(4, 26);
-            this.tabAlarm.Name = "tabAlarm";
-            this.tabAlarm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAlarm.Size = new System.Drawing.Size(696, 254);
-            this.tabAlarm.TabIndex = 4;
-            this.tabAlarm.Text = "Alarm";
-            this.tabAlarm.UseVisualStyleBackColor = true;
+            this.TagName.Text = "Tag Name";
+            this.TagName.Width = 295;
             // 
-            // lstvSVGAlarmItem
+            // Properties
             // 
-            this.lstvSVGAlarmItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colID,
-            this.columnHeader1,
-            this.colTagLowName,
-            this.colTagHighName});
-            this.lstvSVGAlarmItem.FullRowSelect = true;
-            this.lstvSVGAlarmItem.GridLines = true;
-            this.lstvSVGAlarmItem.HideSelection = false;
-            this.lstvSVGAlarmItem.Location = new System.Drawing.Point(7, 47);
-            this.lstvSVGAlarmItem.Margin = new System.Windows.Forms.Padding(4);
-            this.lstvSVGAlarmItem.MultiSelect = false;
-            this.lstvSVGAlarmItem.Name = "lstvSVGAlarmItem";
-            this.lstvSVGAlarmItem.Size = new System.Drawing.Size(665, 200);
-            this.lstvSVGAlarmItem.TabIndex = 19;
-            this.lstvSVGAlarmItem.UseCompatibleStateImageBehavior = false;
-            this.lstvSVGAlarmItem.View = System.Windows.Forms.View.Details;
+            this.Properties.Text = "Properties";
+            this.Properties.Width = 173;
             // 
-            // colID
+            // Type
             // 
-            this.colID.Text = "ID";
-            this.colID.Width = 81;
+            this.Type.Text = "Type";
+            this.Type.Width = 296;
             // 
-            // columnHeader1
+            // columnHeader9
             // 
-            this.columnHeader1.Text = "Tag name";
-            this.columnHeader1.Width = 125;
+            this.columnHeader9.Text = "ID";
+            this.columnHeader9.Width = 176;
             // 
-            // colTagLowName
+            // columnHeader10
             // 
-            this.colTagLowName.Text = "Low";
-            this.colTagLowName.Width = 146;
+            this.columnHeader10.Text = "TagName";
+            this.columnHeader10.Width = 345;
             // 
-            // colTagHighName
+            // columnHeader11
             // 
-            this.colTagHighName.Text = "High";
-            this.colTagHighName.Width = 259;
+            this.columnHeader11.Text = "High";
+            this.columnHeader11.Width = 214;
             // 
-            // button1
+            // columnHeader12
             // 
-            this.button1.Location = new System.Drawing.Point(589, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.columnHeader12.Text = "Low";
+            this.columnHeader12.Width = 217;
             // 
-            // btnOK
+            // columnHeader13
             // 
-            this.btnOK.Location = new System.Drawing.Point(556, 298);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 9;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.columnHeader13.Text = "ID Container";
+            this.columnHeader13.Width = 284;
             // 
-            // btnCancel
+            // columnHeader14
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(637, 298);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.columnHeader14.Text = "ID Value";
+            this.columnHeader14.Width = 260;
             // 
-            // filePicker
+            // columnHeader15
             // 
-            this.filePicker.Filter = "SVG Files | *.SVG";
+            this.columnHeader15.Text = "Tag Name";
+            this.columnHeader15.Width = 261;
             // 
-            // tabCutaway
+            // columnHeader16
             // 
-            this.tabCutaway.Controls.Add(this.lstvSVGCutawayItem);
-            this.tabCutaway.Controls.Add(this.btnEditCutaway);
-            this.tabCutaway.Location = new System.Drawing.Point(4, 26);
-            this.tabCutaway.Name = "tabCutaway";
-            this.tabCutaway.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCutaway.Size = new System.Drawing.Size(696, 254);
-            this.tabCutaway.TabIndex = 5;
-            this.tabCutaway.Text = "Cutaway";
-            this.tabCutaway.UseVisualStyleBackColor = true;
+            this.columnHeader16.Text = "Min";
+            this.columnHeader16.Width = 140;
             // 
-            // lstvSVGCutawayItem
+            // columnHeader17
             // 
-            this.lstvSVGCutawayItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.lstvSVGCutawayItem.FullRowSelect = true;
-            this.lstvSVGCutawayItem.GridLines = true;
-            this.lstvSVGCutawayItem.HideSelection = false;
-            this.lstvSVGCutawayItem.Location = new System.Drawing.Point(7, 47);
-            this.lstvSVGCutawayItem.Margin = new System.Windows.Forms.Padding(4);
-            this.lstvSVGCutawayItem.MultiSelect = false;
-            this.lstvSVGCutawayItem.Name = "lstvSVGCutawayItem";
-            this.lstvSVGCutawayItem.Size = new System.Drawing.Size(665, 200);
-            this.lstvSVGCutawayItem.TabIndex = 21;
-            this.lstvSVGCutawayItem.UseCompatibleStateImageBehavior = false;
-            this.lstvSVGCutawayItem.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "ID";
-            this.columnHeader2.Width = 81;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tag name";
-            this.columnHeader3.Width = 125;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Min";
-            this.columnHeader4.Width = 146;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Max";
-            this.columnHeader5.Width = 259;
-            // 
-            // btnEditCutaway
-            // 
-            this.btnEditCutaway.Location = new System.Drawing.Point(589, 7);
-            this.btnEditCutaway.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditCutaway.Name = "btnEditCutaway";
-            this.btnEditCutaway.Size = new System.Drawing.Size(100, 28);
-            this.btnEditCutaway.TabIndex = 20;
-            this.btnEditCutaway.Text = "Edit";
-            this.btnEditCutaway.UseVisualStyleBackColor = true;
-            this.btnEditCutaway.Click += new System.EventHandler(this.btnEditCutaway_Click);
+            this.columnHeader17.Text = "Max";
+            this.columnHeader17.Width = 117;
             // 
             // ATSCADASVGEditor
             // 
@@ -419,10 +580,10 @@ namespace ATSCADAWebApp.Component.SVG
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(724, 333);
+            this.ClientSize = new System.Drawing.Size(1285, 765);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.tabElement);
+            this.Controls.Add(this.btnEditHyperLink);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -431,21 +592,23 @@ namespace ATSCADAWebApp.Component.SVG
             this.Name = "ATSCADASVGEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SGV Editor";
-            this.tabElement.ResumeLayout(false);
+            this.btnEditHyperLink.ResumeLayout(false);
             this.tabBase.ResumeLayout(false);
             this.tabBase.PerformLayout();
             this.pageExtend.ResumeLayout(false);
             this.pageExtend.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.tabAddValue.ResumeLayout(false);
             this.tabAlarm.ResumeLayout(false);
             this.tabCutaway.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabElement;
+        private System.Windows.Forms.TabControl btnEditHyperLink;
         private System.Windows.Forms.TabPage pageExtend;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
@@ -459,27 +622,47 @@ namespace ATSCADAWebApp.Component.SVG
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblColor;
-        private System.Windows.Forms.TabPage tabAddValue;
-        private System.Windows.Forms.TabPage tabAlarm;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.ListView lstvSVGValueItem;
-        private System.Windows.Forms.ColumnHeader colName;
-        private System.Windows.Forms.ColumnHeader colProperties;
-        private System.Windows.Forms.ColumnHeader colTagName;
         private Extension.Color.TextBoxColor txtColor;
         private System.Windows.Forms.Button btnPickColor;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView lstvSVGAlarmItem;
-        private System.Windows.Forms.ColumnHeader colID;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader colTagLowName;
-        private System.Windows.Forms.ColumnHeader colTagHighName;
-        private System.Windows.Forms.TabPage tabCutaway;
-        private System.Windows.Forms.ListView lstvSVGCutawayItem;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader colID;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader colTagLowName;
+        private System.Windows.Forms.ColumnHeader colTagHighName;
+        private System.Windows.Forms.ColumnHeader colName;
+        private System.Windows.Forms.ColumnHeader colTagName;
+        private System.Windows.Forms.ColumnHeader colProperties;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabAddValue;
+        private System.Windows.Forms.ListView lstvSVGValueItem;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.TabPage tabAlarm;
+        private System.Windows.Forms.ListView lstvSVGAlarmItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabCutaway;
+        private System.Windows.Forms.ListView lstvSVGCutawayItem;
         private System.Windows.Forms.Button btnEditCutaway;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader TagName;
+        private System.Windows.Forms.ColumnHeader Properties;
+        private System.Windows.Forms.ColumnHeader Type;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
     }
 }

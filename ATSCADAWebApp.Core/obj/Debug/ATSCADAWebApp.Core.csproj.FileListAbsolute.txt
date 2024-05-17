@@ -82,7 +82,6 @@ H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebA
 H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAFastWeb.Core.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\bin\Debug\ATSCADAFastWeb.Core.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\bin\Debug\ATSCADAFastWeb.Core.pdb
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAWebApp.Core.csproj.AssemblyReference.cache
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAWebApp.Core.ATSCADAAppEditor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAWebApp.Core.ATSCADAColumnEditor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAWebApp.Core.ATSCADAHyperlinkViewEditor.resources

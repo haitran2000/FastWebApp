@@ -137,9 +137,18 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\FastWeb Desi
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ATSCADAFastWeb.Component.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ATSCADAFastWeb.Core.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ATSCADAFastWeb.Extension.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\iAlarmSMS.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\iDriver.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ToolExtensions.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\MySql.Data.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ATSCADAFastWeb.Component.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ATSCADAFastWeb.Core.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ATSCADAFastWeb.Extension.pdb
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.xml
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\iAlarmSMS.pdb
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.Framework.xml
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.csproj.AssemblyReference.cache
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.Properties.Resources.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.View.AboutView.resources
@@ -150,13 +159,3 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebAp
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.csproj.CopyComplete
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.exe
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.pdb
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.dll
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\iAlarmSMS.dll
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.Framework.dll
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\iDriver.dll
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ToolExtensions.dll
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\MySql.Data.dll
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DriverPluginInterface.dll
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.xml
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\iAlarmSMS.pdb
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\DocumentFormat.OpenXml.Framework.xml

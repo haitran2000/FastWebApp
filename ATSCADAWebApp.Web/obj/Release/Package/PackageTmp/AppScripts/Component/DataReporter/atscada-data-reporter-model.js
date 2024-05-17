@@ -48,6 +48,11 @@ export class AtscadaDataReporterModel {
         const result = await this.exportService.getDataReport(this.exportParam);
         return result;
     }
+    // Xuat file pdf
+    async export_pdf() {
+        const result = await this.exportService.getDataReportPDF(this.exportParam);
+        return result;
+    }
 
     dispose() { }
 }

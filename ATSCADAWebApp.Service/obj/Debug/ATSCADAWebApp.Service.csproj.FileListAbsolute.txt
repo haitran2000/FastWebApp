@@ -22,7 +22,6 @@ H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebA
 H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebApp.Service\obj\Debug\ATSCADAWebApp.Service.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Service\bin\Debug\ATSCADAWebApp.Service.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Service\bin\Debug\ATSCADAWebApp.Service.pdb
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Service\obj\Debug\ATSCADAWebApp.Service.csproj.AssemblyReference.cache
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Service\obj\Debug\ATSCADAWebApp.Service.csproj.CoreCompileInputs.cache
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Service\obj\Debug\ATSCADAWebApp.Service.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Service\obj\Debug\ATSCADAWebApp.Service.pdb

@@ -37,6 +37,7 @@ namespace ATSCADAWebApp.Component.SVGValue
             this.lblName = new System.Windows.Forms.Label();
             this.tabElement = new System.Windows.Forms.TabControl();
             this.pageProperties = new System.Windows.Forms.TabPage();
+            this.importFileExcel = new System.Windows.Forms.Button();
             this.txtMin = new System.Windows.Forms.TextBox();
             this.txtMax = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@ namespace ATSCADAWebApp.Component.SVGValue
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
-            this.importFileExcel = new System.Windows.Forms.Button();
             this.tabElement.SuspendLayout();
             this.pageProperties.SuspendLayout();
             this.SuspendLayout();
@@ -63,54 +63,60 @@ namespace ATSCADAWebApp.Component.SVGValue
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(468, 392);
+            this.btnCancel.Location = new System.Drawing.Point(624, 482);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(387, 392);
+            this.btnOK.Location = new System.Drawing.Point(516, 482);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(100, 28);
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(81, 14);
+            this.txtName.Location = new System.Drawing.Point(108, 17);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(172, 20);
+            this.txtName.Size = new System.Drawing.Size(228, 22);
             this.txtName.TabIndex = 1;
             // 
             // lblTagName
             // 
             this.lblTagName.AutoSize = true;
-            this.lblTagName.Location = new System.Drawing.Point(17, 45);
+            this.lblTagName.Location = new System.Drawing.Point(23, 55);
+            this.lblTagName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTagName.Name = "lblTagName";
-            this.lblTagName.Size = new System.Drawing.Size(58, 13);
+            this.lblTagName.Size = new System.Drawing.Size(76, 17);
             this.lblTagName.TabIndex = 17;
             this.lblTagName.Text = "Tag name:";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(17, 17);
+            this.lblName.Location = new System.Drawing.Point(23, 21);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(21, 13);
+            this.lblName.Size = new System.Drawing.Size(25, 17);
             this.lblName.TabIndex = 16;
             this.lblName.Text = "ID:";
             // 
             // tabElement
             // 
             this.tabElement.Controls.Add(this.pageProperties);
-            this.tabElement.Location = new System.Drawing.Point(8, 8);
+            this.tabElement.Location = new System.Drawing.Point(11, 10);
+            this.tabElement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabElement.Name = "tabElement";
             this.tabElement.SelectedIndex = 0;
-            this.tabElement.Size = new System.Drawing.Size(535, 145);
+            this.tabElement.Size = new System.Drawing.Size(713, 178);
             this.tabElement.TabIndex = 17;
             // 
             // pageProperties
@@ -128,39 +134,50 @@ namespace ATSCADAWebApp.Component.SVGValue
             this.pageProperties.Controls.Add(this.lblName);
             this.pageProperties.Controls.Add(this.lblTagName);
             this.pageProperties.Controls.Add(this.txtName);
-            this.pageProperties.Location = new System.Drawing.Point(4, 22);
+            this.pageProperties.Location = new System.Drawing.Point(4, 25);
+            this.pageProperties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pageProperties.Name = "pageProperties";
-            this.pageProperties.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.pageProperties.Size = new System.Drawing.Size(527, 119);
+            this.pageProperties.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageProperties.Size = new System.Drawing.Size(705, 149);
             this.pageProperties.TabIndex = 0;
             this.pageProperties.Text = "Properties";
             this.pageProperties.UseVisualStyleBackColor = true;
             // 
+            // importFileExcel
+            // 
+            this.importFileExcel.Location = new System.Drawing.Point(107, 91);
+            this.importFileExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.importFileExcel.Name = "importFileExcel";
+            this.importFileExcel.Size = new System.Drawing.Size(231, 28);
+            this.importFileExcel.TabIndex = 30;
+            this.importFileExcel.Text = "Import to Excel";
+            this.importFileExcel.UseVisualStyleBackColor = true;
+            this.importFileExcel.Click += new System.EventHandler(this.importButton_Click);
+            // 
             // txtMin
             // 
-            this.txtMin.Location = new System.Drawing.Point(460, 76);
-            this.txtMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMin.Location = new System.Drawing.Point(613, 94);
+            this.txtMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMin.Name = "txtMin";
-            this.txtMin.Size = new System.Drawing.Size(38, 20);
+            this.txtMin.Size = new System.Drawing.Size(49, 22);
             this.txtMin.TabIndex = 29;
             this.txtMin.Visible = false;
             // 
             // txtMax
             // 
-            this.txtMax.Location = new System.Drawing.Point(366, 76);
-            this.txtMax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMax.Location = new System.Drawing.Point(488, 94);
+            this.txtMax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMax.Name = "txtMax";
-            this.txtMax.Size = new System.Drawing.Size(38, 20);
+            this.txtMax.Size = new System.Drawing.Size(49, 22);
             this.txtMax.TabIndex = 28;
             this.txtMax.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(419, 78);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(559, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 27;
             this.label4.Text = "Max";
             this.label4.Visible = false;
@@ -168,10 +185,9 @@ namespace ATSCADAWebApp.Component.SVGValue
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(303, 78);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(404, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
+            this.label3.Size = new System.Drawing.Size(30, 17);
             this.label3.TabIndex = 26;
             this.label3.Text = "Min";
             this.label3.Visible = false;
@@ -186,19 +202,20 @@ namespace ATSCADAWebApp.Component.SVGValue
             "Float",
             "Double",
             "String"});
-            this.cbbType.Location = new System.Drawing.Point(366, 48);
-            this.cbbType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbType.Location = new System.Drawing.Point(488, 59);
+            this.cbbType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbType.Name = "cbbType";
-            this.cbbType.Size = new System.Drawing.Size(132, 21);
+            this.cbbType.Size = new System.Drawing.Size(175, 24);
             this.cbbType.TabIndex = 23;
             this.cbbType.SelectedIndexChanged += new System.EventHandler(this.cbbType_SelectedIndexChanged);
             // 
             // lbType
             // 
             this.lbType.AutoSize = true;
-            this.lbType.Location = new System.Drawing.Point(303, 50);
+            this.lbType.Location = new System.Drawing.Point(404, 62);
+            this.lbType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(34, 13);
+            this.lbType.Size = new System.Drawing.Size(44, 17);
             this.lbType.TabIndex = 22;
             this.lbType.Text = "Type:";
             // 
@@ -207,30 +224,32 @@ namespace ATSCADAWebApp.Component.SVGValue
             this.cbbProperties.FormattingEnabled = true;
             this.cbbProperties.Items.AddRange(new object[] {
             "Value",
-            "Status"});
-            this.cbbProperties.Location = new System.Drawing.Point(366, 12);
-            this.cbbProperties.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "Status",
+            "Animation"});
+            this.cbbProperties.Location = new System.Drawing.Point(488, 15);
+            this.cbbProperties.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbProperties.Name = "cbbProperties";
-            this.cbbProperties.Size = new System.Drawing.Size(132, 21);
+            this.cbbProperties.Size = new System.Drawing.Size(175, 24);
             this.cbbProperties.TabIndex = 21;
             this.cbbProperties.SelectedIndexChanged += new System.EventHandler(this.cbbProperties_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(303, 18);
+            this.label1.Location = new System.Drawing.Point(404, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 20;
             this.label1.Text = "Properties:";
             // 
             // cbxDataTagName
             // 
             this.cbxDataTagName.InRuntime = false;
-            this.cbxDataTagName.Location = new System.Drawing.Point(81, 42);
-            this.cbxDataTagName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxDataTagName.Location = new System.Drawing.Point(108, 52);
+            this.cbxDataTagName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cbxDataTagName.Name = "cbxDataTagName";
-            this.cbxDataTagName.Size = new System.Drawing.Size(172, 21);
+            this.cbxDataTagName.Size = new System.Drawing.Size(229, 26);
             this.cbxDataTagName.TabIndex = 3;
             this.cbxDataTagName.TagName = "";
             // 
@@ -244,10 +263,11 @@ namespace ATSCADAWebApp.Component.SVGValue
             this.lstvSVGValueItem.FullRowSelect = true;
             this.lstvSVGValueItem.GridLines = true;
             this.lstvSVGValueItem.HideSelection = false;
-            this.lstvSVGValueItem.Location = new System.Drawing.Point(8, 160);
+            this.lstvSVGValueItem.Location = new System.Drawing.Point(11, 197);
+            this.lstvSVGValueItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstvSVGValueItem.MultiSelect = false;
             this.lstvSVGValueItem.Name = "lstvSVGValueItem";
-            this.lstvSVGValueItem.Size = new System.Drawing.Size(533, 227);
+            this.lstvSVGValueItem.Size = new System.Drawing.Size(709, 278);
             this.lstvSVGValueItem.TabIndex = 18;
             this.lstvSVGValueItem.UseCompatibleStateImageBehavior = false;
             this.lstvSVGValueItem.View = System.Windows.Forms.View.Details;
@@ -274,57 +294,51 @@ namespace ATSCADAWebApp.Component.SVGValue
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(92, 392);
+            this.btnRemove.Location = new System.Drawing.Point(123, 482);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.Size = new System.Drawing.Size(100, 28);
             this.btnRemove.TabIndex = 6;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(8, 392);
+            this.btnUpdate.Location = new System.Drawing.Point(11, 482);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(254, 392);
+            this.btnDown.Location = new System.Drawing.Point(339, 482);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(75, 23);
+            this.btnDown.Size = new System.Drawing.Size(100, 28);
             this.btnDown.TabIndex = 8;
             this.btnDown.Text = "Down";
             this.btnDown.UseVisualStyleBackColor = true;
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(173, 392);
+            this.btnUp.Location = new System.Drawing.Point(231, 482);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(75, 23);
+            this.btnUp.Size = new System.Drawing.Size(100, 28);
             this.btnUp.TabIndex = 7;
             this.btnUp.Text = "Up";
             this.btnUp.UseVisualStyleBackColor = true;
             // 
-            // importFileExcel
-            // 
-            this.importFileExcel.Location = new System.Drawing.Point(80, 74);
-            this.importFileExcel.Name = "importFileExcel";
-            this.importFileExcel.Size = new System.Drawing.Size(173, 23);
-            this.importFileExcel.TabIndex = 30;
-            this.importFileExcel.Text = "Import to Excel";
-            this.importFileExcel.UseVisualStyleBackColor = true;
-            this.importFileExcel.Click += new System.EventHandler(this.importButton_Click);
-            // 
             // ATSCADASVGValueItemEditor
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(547, 418);
+            this.ClientSize = new System.Drawing.Size(729, 514);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
             this.Controls.Add(this.btnRemove);
@@ -335,6 +349,7 @@ namespace ATSCADAWebApp.Component.SVGValue
             this.Controls.Add(this.btnOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ATSCADASVGValueItemEditor";

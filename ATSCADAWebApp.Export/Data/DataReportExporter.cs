@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using ATSCADAWebApp.Extension.Method;
 using OfficeOpenXml.Drawing.Chart;
+using System;
 
 namespace ATSCADAWebApp.Export.Data
 {
@@ -24,7 +25,7 @@ namespace ATSCADAWebApp.Export.Data
         private readonly string[] columnNames;
 
         private int rowDataCount;
-
+        private List<List<double>> listOfLists = new List<List<double>>();
         public DataReportExporter(string templatePath, DataReport report)
         {
             this.templatePath = templatePath;
@@ -66,7 +67,10 @@ namespace ATSCADAWebApp.Export.Data
         private void FillDataSheet(ExcelWorksheet dataSheet)
         {
             dataSheet.Cells[6, 2].LoadFromArrays(GetHeader());
-            dataSheet.Cells[7, 1].LoadFromArrays(GetData());
+            dataSheet.Cells[7, 2].LoadFromArrays(GetMin());
+            dataSheet.Cells[8, 2].LoadFromArrays(GetMax());
+            dataSheet.Cells[9, 2].LoadFromArrays(GetAVG());
+            dataSheet.Cells[10, 1].LoadFromArrays(GetData());
         }
 
         private IEnumerable<object[]> GetHeader()
@@ -76,7 +80,91 @@ namespace ATSCADAWebApp.Export.Data
                 headerNames[index] = this.dataReport.ColumnNames[index + 1];
             yield return headerNames;
         }
-
+        
+        private IEnumerable<object[]> GetMin()
+        {
+            for(int i= 0; i< this.itemCount;i++)
+            {
+                List<double> newList = new List<double>();
+                listOfLists.Add(newList);
+            }
+            foreach (var dataReportLog in this.dataReport.DataReportLogs)
+            {
+                var dataReportItemLogs = dataReportLog.DataReportItemLogs;
+                for (var index = 0; index < this.itemCount; index++)
+                {
+                    var rawValue = dataReportItemLogs[index].Value;
+                    if (double.TryParse(rawValue, out double value))
+                    {
+                        listOfLists[index].Add(value);
+                    }
+                    else
+                        listOfLists[index].Add(0);
+                }
+            }
+            var data = new object[this.itemCount];
+            for (int i = 0; i < this.itemCount; i++)
+            {
+                data[i] = listOfLists[i].Min();
+            }
+            yield return data;
+        }
+        private IEnumerable<object[]> GetMax()
+        {
+            for (int i = 0; i < this.itemCount; i++)
+            {
+                List<double> newList = new List<double>();
+                listOfLists.Add(newList);
+            }
+            foreach (var dataReportLog in this.dataReport.DataReportLogs)
+            {
+                var dataReportItemLogs = dataReportLog.DataReportItemLogs;
+                for (var index = 0; index < this.itemCount; index++)
+                {
+                    var rawValue = dataReportItemLogs[index].Value;
+                    if (double.TryParse(rawValue, out double value))
+                    {
+                        listOfLists[index].Add(value);
+                    }
+                    else
+                        listOfLists[index].Add(0);
+                }
+            }
+            var data = new object[this.itemCount];
+            for (int i = 0; i < this.itemCount; i++)
+            {
+                data[i] = listOfLists[i].Max();
+            }
+            yield return data;
+        }
+        private IEnumerable<object[]> GetAVG()
+        {
+            for (int i = 0; i < this.itemCount; i++)
+            {
+                List<double> newList = new List<double>();
+                listOfLists.Add(newList);
+            }
+            foreach (var dataReportLog in this.dataReport.DataReportLogs)
+            {
+                var dataReportItemLogs = dataReportLog.DataReportItemLogs;
+                for (var index = 0; index < this.itemCount; index++)
+                {
+                    var rawValue = dataReportItemLogs[index].Value;
+                    if (double.TryParse(rawValue, out double value))
+                    {
+                        listOfLists[index].Add(value);
+                    }
+                    else
+                        listOfLists[index].Add(0);
+                }
+            }
+            var data = new object[this.itemCount];
+            for (int i = 0; i < this.itemCount; i++)
+            {
+                data[i] = Math.Round(listOfLists[i].Average(), 2).ToString();
+            }
+            yield return data;
+        }
         private IEnumerable<object[]> GetData()
         {
             foreach (var dataReportLog in this.dataReport.DataReportLogs)
@@ -92,7 +180,7 @@ namespace ATSCADAWebApp.Export.Data
                     if (double.TryParse(rawValue, out double value))
                     {
                         data[index + 1] = value;
-                    }                        
+                    }
                     else
                         data[index + 1] = rawValue;
                 }
@@ -100,11 +188,12 @@ namespace ATSCADAWebApp.Export.Data
                 yield return data;
             }
         }
-
         private void FormatDataSheet(ExcelWorksheet dataSheet)
         {
             #region CONTENT
-
+            dataSheet.Cells[7, 1].Value = "Minimum";
+            dataSheet.Cells[8, 1].Value = "Maximum";
+            dataSheet.Cells[9, 1].Value = "Average";
             dataSheet.Cells[2, 1].Value = this.dataReport.Param.Content;
             dataSheet.Cells[3, 2].Value = this.dataReport.Param.FromDateTime;
             dataSheet.Cells[4, 2].Value = this.dataReport.Param.ToDateTime;
@@ -148,10 +237,10 @@ namespace ATSCADAWebApp.Export.Data
             var lineChart = chartSheet.Drawings.AddChart("lineChart", eChartType.Line) as ExcelLineChart;
             lineChart.Title.Text = this.dataReport.Param.Content;
 
-            var rangeDateTime = dataSheet.Cells[7, 1, 6 + this.rowDataCount, 1];           
+            var rangeDateTime = dataSheet.Cells[10, 1, 6 + this.rowDataCount, 1];           
             for (var index = 0; index < this.itemCount; index++)
             {
-                var range = dataSheet.Cells[7, 2 + index, 6 + this.rowDataCount, 2 + index];
+                var range = dataSheet.Cells[10, 2 + index, 6 + this.rowDataCount, 2 + index];
                 var serie = lineChart.Series.Add(range, rangeDateTime) as ExcelLineChartSerie;
                 serie.Header = dataSheet.Cells[6, 2 + index].Value.ToString();
                 serie.LineColor = this.dataReport.Param.Items[index].Color.HexToColor();

@@ -11,6 +11,8 @@ export class AtscadaDataReporterController {
         this.view.dispatcher.on('reportButtonClicked', async () => await this.actionReportButtonClicked());
         // 2. Click button export
         this.view.dispatcher.on('exportButtonClicked', async () => await this.actionExportButtonClicked());
+        // . Click button export PDF
+        this.view.dispatcher.on('exportPDFButtonClicked', async () => await this.actionExportPDFButtonClicked());
     }
 
     async actionReportButtonClicked() {
@@ -20,6 +22,8 @@ export class AtscadaDataReporterController {
     async actionExportButtonClicked() {
         await this.model.export();
     }
-
+    async actionExportPDFButtonClicked() {
+        await this.model.export_pdf();
+    }
     dispose() { }
 }
