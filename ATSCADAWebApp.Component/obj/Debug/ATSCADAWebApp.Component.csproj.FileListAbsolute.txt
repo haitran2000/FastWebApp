@@ -180,8 +180,10 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\DocumentFor
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\DocumentFormat.OpenXml.Framework.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\iAlarmSMS.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\iGraphicTools.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\iTools.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\MySql.Data.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\SVG.dll
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\ZedGraph.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\ATSCADAFastWeb.Core.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\ATSCADAFastWeb.Extension.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\bin\Debug\DocumentFormat.OpenXml.xml
@@ -216,3 +218,4 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebA
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.csproj.CopyComplete
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAFastWeb.Component.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAFastWeb.Component.pdb
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVGHyperLink.ATSCADASVGHyperLinkItemEditor.resources

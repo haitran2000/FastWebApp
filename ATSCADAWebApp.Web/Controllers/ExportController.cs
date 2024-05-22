@@ -154,55 +154,5 @@ namespace ATSCADAWebApp.Web.Controllers
                 return Json(new { Status = false, Message = ex.Message });
             }
         }
-        public void Test()
-        {
-            // Load tệp Excel từ đường dẫn
-            Workbook workbook = new Workbook("D:\\Data.xlsx");
-
-            // Chuyển đổi sang định dạng PDF
-            workbook.Save("D:\\Okila.pdf", SaveFormat.Pdf);
-
-            System.Console.WriteLine("Chuyển đổi thành công từ Excel sang PDF.");
-        }
-        public ActionResult DownloadPdfFromBase64(string base64String)
-        {
-            try
-            {
-                // Giải mã chuỗi base64 thành mảng byte
-                byte[] byteArray = Convert.FromBase64String(base64String);
-
-                // Tạo một tệp Excel tạm thời từ mảng byte
-                using (MemoryStream stream = new MemoryStream(byteArray))
-                {
-                    Workbook workbook = new Workbook(stream);
-
-                    // Đường dẫn tạm thời để lưu tệp Excel
-                    string excelTempFilePath = Path.GetTempFileName() + ".xlsx";
-
-                    // Lưu tệp Excel tạm thời
-                    workbook.Save(excelTempFilePath, SaveFormat.Xlsx);
-
-                    // Chuyển đổi tệp Excel thành tệp PDF
-                    string pdfTempFilePath = excelTempFilePath.Replace(".xlsx", ".pdf");
-                    Workbook excelWorkbook = new Workbook(excelTempFilePath);
-                    excelWorkbook.Save(pdfTempFilePath, SaveFormat.Pdf);
-
-                    // Trả về tệp PDF cho người dùng để tải xuống
-                    byte[] pdfByteArray = System.IO.File.ReadAllBytes(pdfTempFilePath);
-                    string pdfFileName = "converted_file.pdf";
-
-                    // Xóa các tệp tạm thời sau khi đã sử dụng xong
-                    System.IO.File.Delete(excelTempFilePath);
-                    System.IO.File.Delete(pdfTempFilePath);
-
-                    return File(pdfByteArray, "application/pdf", pdfFileName);
-                }
-            }
-            catch (Exception ex)
-            {
-                // Xử lý lỗi nếu có
-                return Content("Error: " + ex.Message);
-            }
-        }
     }
 }

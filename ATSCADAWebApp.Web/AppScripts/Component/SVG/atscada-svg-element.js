@@ -63,7 +63,7 @@ export class AtscadaSVGElement extends HTMLElement {
                 this.dataTagNames.push(elementsArray[i].dataTagName);
                 this.SVGItems.push(elementsArray[i].content);
                 this.SVGItemsProperties.push(elementsArray[i].properties);
-                const typeValue = [elementsArray[i].type, elementsArray[i].speedTagName, elementsArray[i].min, elementsArray[i].max];
+                const typeValue = [elementsArray[i].type, elementsArray[i].speedTagName, elementsArray[i].min, elementsArray[i].max, elementsArray[i].attribute];
                 this.SVGItemsType.push(typeValue);
             }
 

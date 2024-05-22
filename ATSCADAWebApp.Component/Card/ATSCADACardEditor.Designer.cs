@@ -39,7 +39,6 @@ namespace ATSCADAWebApp.Component.Card
             this.pageExtend = new System.Windows.Forms.TabPage();
             this.txtGridColumn = new System.Windows.Forms.TextBox();
             this.lblGridColumn = new System.Windows.Forms.Label();
-            this.cbxDataTagName = new ATSCADAWebApp.ToolExtensions.TagCollection.SmartTagComboBox();
             this.nudDecimalPlaces = new System.Windows.Forms.NumericUpDown();
             this.txtIcon = new System.Windows.Forms.TextBox();
             this.txtContent = new System.Windows.Forms.TextBox();
@@ -50,7 +49,6 @@ namespace ATSCADAWebApp.Component.Card
             this.lblContent = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtColor = new ATSCADAWebApp.Extension.Color.TextBoxColor();
             this.tabElement.SuspendLayout();
             this.pageBase.SuspendLayout();
             this.pageExtend.SuspendLayout();
@@ -73,10 +71,10 @@ namespace ATSCADAWebApp.Component.Card
             this.pageBase.Controls.Add(this.lblDescription);
             this.pageBase.Controls.Add(this.txtName);
             this.pageBase.Controls.Add(this.lblName);
-            this.pageBase.Location = new System.Drawing.Point(4, 22);
+            this.pageBase.Location = new System.Drawing.Point(4, 26);
             this.pageBase.Name = "pageBase";
             this.pageBase.Padding = new System.Windows.Forms.Padding(3);
-            this.pageBase.Size = new System.Drawing.Size(384, 189);
+            this.pageBase.Size = new System.Drawing.Size(384, 185);
             this.pageBase.TabIndex = 0;
             this.pageBase.Text = "Base";
             this.pageBase.UseVisualStyleBackColor = true;
@@ -94,7 +92,7 @@ namespace ATSCADAWebApp.Component.Card
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(17, 45);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(63, 13);
+            this.lblDescription.Size = new System.Drawing.Size(83, 17);
             this.lblDescription.TabIndex = 2;
             this.lblDescription.Text = "Description:";
             // 
@@ -102,7 +100,7 @@ namespace ATSCADAWebApp.Component.Card
             // 
             this.txtName.Location = new System.Drawing.Point(91, 14);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(277, 20);
+            this.txtName.Size = new System.Drawing.Size(277, 23);
             this.txtName.TabIndex = 1;
             // 
             // lblName
@@ -110,16 +108,14 @@ namespace ATSCADAWebApp.Component.Card
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(17, 17);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(49, 17);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
             // pageExtend
             // 
-            this.pageExtend.Controls.Add(this.txtColor);
             this.pageExtend.Controls.Add(this.txtGridColumn);
             this.pageExtend.Controls.Add(this.lblGridColumn);
-            this.pageExtend.Controls.Add(this.cbxDataTagName);
             this.pageExtend.Controls.Add(this.nudDecimalPlaces);
             this.pageExtend.Controls.Add(this.txtIcon);
             this.pageExtend.Controls.Add(this.txtContent);
@@ -128,10 +124,10 @@ namespace ATSCADAWebApp.Component.Card
             this.pageExtend.Controls.Add(this.lblColor);
             this.pageExtend.Controls.Add(this.lblDataTagName);
             this.pageExtend.Controls.Add(this.lblContent);
-            this.pageExtend.Location = new System.Drawing.Point(4, 22);
+            this.pageExtend.Location = new System.Drawing.Point(4, 26);
             this.pageExtend.Name = "pageExtend";
             this.pageExtend.Padding = new System.Windows.Forms.Padding(3);
-            this.pageExtend.Size = new System.Drawing.Size(384, 189);
+            this.pageExtend.Size = new System.Drawing.Size(384, 185);
             this.pageExtend.TabIndex = 1;
             this.pageExtend.Text = "Extend";
             this.pageExtend.UseVisualStyleBackColor = true;
@@ -140,7 +136,7 @@ namespace ATSCADAWebApp.Component.Card
             // 
             this.txtGridColumn.Location = new System.Drawing.Point(91, 151);
             this.txtGridColumn.Name = "txtGridColumn";
-            this.txtGridColumn.Size = new System.Drawing.Size(277, 20);
+            this.txtGridColumn.Size = new System.Drawing.Size(277, 23);
             this.txtGridColumn.TabIndex = 8;
             // 
             // lblGridColumn
@@ -148,18 +144,9 @@ namespace ATSCADAWebApp.Component.Card
             this.lblGridColumn.AutoSize = true;
             this.lblGridColumn.Location = new System.Drawing.Point(17, 154);
             this.lblGridColumn.Name = "lblGridColumn";
-            this.lblGridColumn.Size = new System.Drawing.Size(66, 13);
+            this.lblGridColumn.Size = new System.Drawing.Size(88, 17);
             this.lblGridColumn.TabIndex = 13;
             this.lblGridColumn.Text = "Grid column:";
-            // 
-            // cbxDataTagName
-            // 
-            this.cbxDataTagName.InRuntime = false;
-            this.cbxDataTagName.Location = new System.Drawing.Point(91, 40);
-            this.cbxDataTagName.Name = "cbxDataTagName";
-            this.cbxDataTagName.Size = new System.Drawing.Size(277, 21);
-            this.cbxDataTagName.TabIndex = 4;
-            this.cbxDataTagName.TagName = "";
             // 
             // nudDecimalPlaces
             // 
@@ -170,21 +157,21 @@ namespace ATSCADAWebApp.Component.Card
             0,
             0});
             this.nudDecimalPlaces.Name = "nudDecimalPlaces";
-            this.nudDecimalPlaces.Size = new System.Drawing.Size(277, 20);
+            this.nudDecimalPlaces.Size = new System.Drawing.Size(277, 23);
             this.nudDecimalPlaces.TabIndex = 7;
             // 
             // txtIcon
             // 
             this.txtIcon.Location = new System.Drawing.Point(91, 95);
             this.txtIcon.Name = "txtIcon";
-            this.txtIcon.Size = new System.Drawing.Size(277, 20);
+            this.txtIcon.Size = new System.Drawing.Size(277, 23);
             this.txtIcon.TabIndex = 6;
             // 
             // txtContent
             // 
             this.txtContent.Location = new System.Drawing.Point(91, 14);
             this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(277, 20);
+            this.txtContent.Size = new System.Drawing.Size(277, 23);
             this.txtContent.TabIndex = 3;
             // 
             // lblDecimalPlaces
@@ -192,7 +179,7 @@ namespace ATSCADAWebApp.Component.Card
             this.lblDecimalPlaces.AutoSize = true;
             this.lblDecimalPlaces.Location = new System.Drawing.Point(17, 124);
             this.lblDecimalPlaces.Name = "lblDecimalPlaces";
-            this.lblDecimalPlaces.Size = new System.Drawing.Size(67, 13);
+            this.lblDecimalPlaces.Size = new System.Drawing.Size(86, 17);
             this.lblDecimalPlaces.TabIndex = 7;
             this.lblDecimalPlaces.Text = "Dec. places:";
             // 
@@ -201,7 +188,7 @@ namespace ATSCADAWebApp.Component.Card
             this.lblIcon.AutoSize = true;
             this.lblIcon.Location = new System.Drawing.Point(17, 96);
             this.lblIcon.Name = "lblIcon";
-            this.lblIcon.Size = new System.Drawing.Size(31, 13);
+            this.lblIcon.Size = new System.Drawing.Size(38, 17);
             this.lblIcon.TabIndex = 6;
             this.lblIcon.Text = "Icon:";
             // 
@@ -210,7 +197,7 @@ namespace ATSCADAWebApp.Component.Card
             this.lblColor.AutoSize = true;
             this.lblColor.Location = new System.Drawing.Point(17, 71);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(34, 13);
+            this.lblColor.Size = new System.Drawing.Size(45, 17);
             this.lblColor.TabIndex = 5;
             this.lblColor.Text = "Color:";
             // 
@@ -219,7 +206,7 @@ namespace ATSCADAWebApp.Component.Card
             this.lblDataTagName.AutoSize = true;
             this.lblDataTagName.Location = new System.Drawing.Point(17, 44);
             this.lblDataTagName.Name = "lblDataTagName";
-            this.lblDataTagName.Size = new System.Drawing.Size(58, 13);
+            this.lblDataTagName.Size = new System.Drawing.Size(76, 17);
             this.lblDataTagName.TabIndex = 4;
             this.lblDataTagName.Text = "Tag name:";
             // 
@@ -228,7 +215,7 @@ namespace ATSCADAWebApp.Component.Card
             this.lblContent.AutoSize = true;
             this.lblContent.Location = new System.Drawing.Point(17, 17);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(47, 13);
+            this.lblContent.Size = new System.Drawing.Size(61, 17);
             this.lblContent.TabIndex = 3;
             this.lblContent.Text = "Content:";
             // 
@@ -251,18 +238,10 @@ namespace ATSCADAWebApp.Component.Card
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // txtColor
-            // 
-            this.txtColor.Color = "#008080";
-            this.txtColor.Location = new System.Drawing.Point(91, 68);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(277, 20);
-            this.txtColor.TabIndex = 14;
-            // 
             // ATSCADACardEditor
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(405, 259);
@@ -271,7 +250,7 @@ namespace ATSCADAWebApp.Component.Card
             this.Controls.Add(this.tabElement);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            base.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ATSCADACardEditor";

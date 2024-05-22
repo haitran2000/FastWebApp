@@ -240,6 +240,7 @@
     <Content Include="AppScripts\Component\Slider\atscada-slider-view.js" />
     <Content Include="AppScripts\Component\StreamCamera\atscada-stream-camera-element.js" />
     <Content Include="AppScripts\Component\SVG\atscada-svg-element.js" />
+    <Content Include="AppScripts\Component\SVG\atscada-svghyperlink-item-element.js" />
     <Content Include="AppScripts\Component\SVG\atscada-svgvalue-item-element.js" />
     <Content Include="AppScripts\Component\SVG\atscada-svgalarm-item-element.js" />
     <Content Include="AppScripts\Component\Gauge\atscada-gauge-element.js" />

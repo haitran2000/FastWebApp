@@ -1,5 +1,6 @@
 ﻿using ATSCADAWebApp.Component.SVGAlarm;
 using ATSCADAWebApp.Component.SVGCutaway;
+using ATSCADAWebApp.Component.SVGHyperLink;
 using ATSCADAWebApp.Component.SVGValue;
 using ATSCADAWebApp.Core;
 using System;
@@ -32,6 +33,7 @@ namespace ATSCADAWebApp.Component.SVG
         private List<ATSCADASVGValueItem> items = new List<ATSCADASVGValueItem>();
         private List<ATSCADASVGAlarmItem> itemsAlarm = new List<ATSCADASVGAlarmItem>();
         private List<ATSCADASVGCutawayItem> itemsCutaway = new List<ATSCADASVGCutawayItem>();
+        private List<ATSCADASVGHyperLinkItem> itemsHyperLink = new List<ATSCADASVGHyperLinkItem>();
         #endregion
 
         #region PROPERTIES
@@ -94,7 +96,12 @@ namespace ATSCADAWebApp.Component.SVG
             get => this.itemsCutaway;
             set => SetField(ref this.itemsCutaway, value);
         }
-
+        [XmlElement("atscada-svghyperlink-item")]
+        public List<ATSCADASVGHyperLinkItem> ItemsHyperLink
+        {
+            get => this.itemsHyperLink;
+            set => SetField(ref this.itemsHyperLink, value);
+        }
         #endregion
 
         #region CONSTRUCTORS
@@ -150,6 +157,8 @@ namespace ATSCADAWebApp.Component.SVG
             foreach (var item in Items)
                 builder.Append(item.Render());
             foreach (var item in ItemsAlarm)
+                builder.Append(item.Render());
+            foreach (var item in itemsCutaway)
                 builder.Append(item.Render());
             foreach (var item in itemsCutaway)
                 builder.Append(item.Render());

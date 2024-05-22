@@ -37,19 +37,34 @@ namespace ATSCADAWebApp.Component.SVG
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pageExtend = new System.Windows.Forms.TabPage();
+            this.btnOpenApp = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAddValue = new System.Windows.Forms.TabPage();
             this.lstvSVGValueItem = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TagName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Properties = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Atribute1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Atribute2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnEdit = new System.Windows.Forms.Button();
             this.tabAlarm = new System.Windows.Forms.TabPage();
             this.lstvSVGAlarmItem = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.tabCutaway = new System.Windows.Forms.TabPage();
             this.lstvSVGCutawayItem = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnEditCutaway = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btnPickColor = new System.Windows.Forms.Button();
             this.txtColor = new ATSCADAWebApp.Extension.Color.TextBoxColor();
             this.lblColor = new System.Windows.Forms.Label();
@@ -73,19 +88,11 @@ namespace ATSCADAWebApp.Component.SVG
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTagName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colProperties = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TagName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Properties = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lstvSVGHyperLinkItem = new System.Windows.Forms.ListView();
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnEditHyperLink.SuspendLayout();
             this.tabBase.SuspendLayout();
             this.pageExtend.SuspendLayout();
@@ -155,6 +162,7 @@ namespace ATSCADAWebApp.Component.SVG
             // 
             // pageExtend
             // 
+            this.pageExtend.Controls.Add(this.btnOpenApp);
             this.pageExtend.Controls.Add(this.tabControl1);
             this.pageExtend.Controls.Add(this.btnPickColor);
             this.pageExtend.Controls.Add(this.txtColor);
@@ -169,6 +177,16 @@ namespace ATSCADAWebApp.Component.SVG
             this.pageExtend.TabIndex = 1;
             this.pageExtend.Text = "Extend";
             this.pageExtend.UseVisualStyleBackColor = true;
+            // 
+            // btnOpenApp
+            // 
+            this.btnOpenApp.Location = new System.Drawing.Point(589, 61);
+            this.btnOpenApp.Name = "btnOpenApp";
+            this.btnOpenApp.Size = new System.Drawing.Size(100, 33);
+            this.btnOpenApp.TabIndex = 36;
+            this.btnOpenApp.Text = "Open SVG";
+            this.btnOpenApp.UseVisualStyleBackColor = true;
+            this.btnOpenApp.Click += new System.EventHandler(this.btnOpenApp_Click);
             // 
             // tabControl1
             // 
@@ -200,7 +218,9 @@ namespace ATSCADAWebApp.Component.SVG
             this.ID,
             this.TagName,
             this.Properties,
-            this.Type});
+            this.Type,
+            this.Atribute1,
+            this.Atribute2});
             this.lstvSVGValueItem.FullRowSelect = true;
             this.lstvSVGValueItem.GridLines = true;
             this.lstvSVGValueItem.HideSelection = false;
@@ -211,6 +231,36 @@ namespace ATSCADAWebApp.Component.SVG
             this.lstvSVGValueItem.TabIndex = 11;
             this.lstvSVGValueItem.UseCompatibleStateImageBehavior = false;
             this.lstvSVGValueItem.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 297;
+            // 
+            // TagName
+            // 
+            this.TagName.Text = "Tag Name";
+            this.TagName.Width = 295;
+            // 
+            // Properties
+            // 
+            this.Properties.Text = "Properties";
+            this.Properties.Width = 173;
+            // 
+            // Type
+            // 
+            this.Type.Text = "Type";
+            this.Type.Width = 188;
+            // 
+            // Atribute1
+            // 
+            this.Atribute1.Text = "Atribute 1";
+            this.Atribute1.Width = 116;
+            // 
+            // Atribute2
+            // 
+            this.Atribute2.Text = "Atribute 2";
+            this.Atribute2.Width = 176;
             // 
             // btnEdit
             // 
@@ -253,6 +303,26 @@ namespace ATSCADAWebApp.Component.SVG
             this.lstvSVGAlarmItem.TabIndex = 19;
             this.lstvSVGAlarmItem.UseCompatibleStateImageBehavior = false;
             this.lstvSVGAlarmItem.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "ID";
+            this.columnHeader9.Width = 176;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "TagName";
+            this.columnHeader10.Width = 345;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "High";
+            this.columnHeader11.Width = 214;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Low";
+            this.columnHeader12.Width = 217;
             // 
             // button1
             // 
@@ -297,6 +367,31 @@ namespace ATSCADAWebApp.Component.SVG
             this.lstvSVGCutawayItem.UseCompatibleStateImageBehavior = false;
             this.lstvSVGCutawayItem.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "ID Container";
+            this.columnHeader13.Width = 284;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "ID Value";
+            this.columnHeader14.Width = 260;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Tag Name";
+            this.columnHeader15.Width = 261;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Min";
+            this.columnHeader16.Width = 140;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Max";
+            this.columnHeader17.Width = 117;
+            // 
             // btnEditCutaway
             // 
             this.btnEditCutaway.Location = new System.Drawing.Point(1099, 11);
@@ -310,8 +405,8 @@ namespace ATSCADAWebApp.Component.SVG
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lstvSVGHyperLinkItem);
             this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -330,20 +425,6 @@ namespace ATSCADAWebApp.Component.SVG
             this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // listView1
-            // 
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 47);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1192, 505);
-            this.listView1.TabIndex = 22;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
             // btnPickColor
             // 
             this.btnPickColor.Location = new System.Drawing.Point(316, 61);
@@ -352,12 +433,11 @@ namespace ATSCADAWebApp.Component.SVG
             this.btnPickColor.TabIndex = 18;
             this.btnPickColor.Text = "Pick Color";
             this.btnPickColor.UseVisualStyleBackColor = true;
-            this.btnPickColor.Click += new System.EventHandler(this.btnPickColor_Click);
             // 
             // txtColor
             // 
             this.txtColor.Color = "#008080";
-            this.txtColor.Location = new System.Drawing.Point(140, 61);
+            this.txtColor.Location = new System.Drawing.Point(141, 60);
             this.txtColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(169, 26);
@@ -509,70 +589,44 @@ namespace ATSCADAWebApp.Component.SVG
             this.colProperties.Text = "Properties";
             this.colProperties.Width = 257;
             // 
-            // ID
+            // lstvSVGHyperLinkItem
             // 
-            this.ID.Text = "ID";
-            this.ID.Width = 297;
+            this.lstvSVGHyperLinkItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21});
+            this.lstvSVGHyperLinkItem.FullRowSelect = true;
+            this.lstvSVGHyperLinkItem.GridLines = true;
+            this.lstvSVGHyperLinkItem.HideSelection = false;
+            this.lstvSVGHyperLinkItem.Location = new System.Drawing.Point(7, 49);
+            this.lstvSVGHyperLinkItem.Margin = new System.Windows.Forms.Padding(4);
+            this.lstvSVGHyperLinkItem.MultiSelect = false;
+            this.lstvSVGHyperLinkItem.Name = "lstvSVGHyperLinkItem";
+            this.lstvSVGHyperLinkItem.Size = new System.Drawing.Size(1192, 503);
+            this.lstvSVGHyperLinkItem.TabIndex = 24;
+            this.lstvSVGHyperLinkItem.UseCompatibleStateImageBehavior = false;
+            this.lstvSVGHyperLinkItem.View = System.Windows.Forms.View.Details;
             // 
-            // TagName
+            // columnHeader18
             // 
-            this.TagName.Text = "Tag Name";
-            this.TagName.Width = 295;
+            this.columnHeader18.Text = "ID";
+            this.columnHeader18.Width = 100;
             // 
-            // Properties
+            // columnHeader19
             // 
-            this.Properties.Text = "Properties";
-            this.Properties.Width = 173;
+            this.columnHeader19.Text = "TagName";
+            this.columnHeader19.Width = 146;
             // 
-            // Type
+            // columnHeader20
             // 
-            this.Type.Text = "Type";
-            this.Type.Width = 296;
+            this.columnHeader20.Text = "Type";
+            this.columnHeader20.Width = 654;
             // 
-            // columnHeader9
+            // columnHeader21
             // 
-            this.columnHeader9.Text = "ID";
-            this.columnHeader9.Width = 176;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "TagName";
-            this.columnHeader10.Width = 345;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "High";
-            this.columnHeader11.Width = 214;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Low";
-            this.columnHeader12.Width = 217;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "ID Container";
-            this.columnHeader13.Width = 284;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "ID Value";
-            this.columnHeader14.Width = 260;
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Tag Name";
-            this.columnHeader15.Width = 261;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Min";
-            this.columnHeader16.Width = 140;
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Max";
-            this.columnHeader17.Width = 117;
+            this.columnHeader21.Text = "Color";
+            this.columnHeader21.Width = 724;
             // 
             // ATSCADASVGEditor
             // 
@@ -650,7 +704,6 @@ namespace ATSCADAWebApp.Component.SVG
         private System.Windows.Forms.Button btnEditCutaway;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader TagName;
         private System.Windows.Forms.ColumnHeader Properties;
@@ -664,5 +717,13 @@ namespace ATSCADAWebApp.Component.SVG
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.Button btnOpenApp;
+        private System.Windows.Forms.ColumnHeader Atribute1;
+        private System.Windows.Forms.ColumnHeader Atribute2;
+        private System.Windows.Forms.ListView lstvSVGHyperLinkItem;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
     }
 }

@@ -13,15 +13,12 @@ namespace ATSCADAWebApp.Component.SVGValue
 
         private string name = "SVGValueItem";
         private string min = "0";
-        private string max = "0";
-
+        private string max = "100";
         private string content = "SVGValue Item";
         private string properties = "Value";
         private string type = "Bool";
-
         private string dataTagName = "TaskName.TagName";
-        
-
+        private string attribute = "";
         #endregion
 
         #region PROPERTIES
@@ -69,6 +66,12 @@ namespace ATSCADAWebApp.Component.SVGValue
             get => this.dataTagName;
             set => SetField(ref this.dataTagName, value);
         }
+        [XmlAttribute("at-bad")]
+        public string Attribute
+        {
+            get => this.attribute;
+            set => SetField(ref this.attribute, value);
+        }
         #endregion
 
         #region CONSTRUCTORS
@@ -91,6 +94,7 @@ namespace ATSCADAWebApp.Component.SVGValue
             builder.Append($"at-type=\"{Type}\" ");
             builder.Append($"at-min=\"{Min}\" ");
             builder.Append($"at-max=\"{Max}\" ");
+            builder.Append($"at-attribute=\"{Attribute}\" ");
             builder.Append($"at-data-tag-name=\"{DataTagName}\" ");
             builder.Append($">"); 
             builder.AppendLine($"</atscada-svgvalue-item>");

@@ -591,4 +591,3 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Web\obj\Debug\ATSCADAWebApp.Web
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Web\obj\Debug\ATSCADAWebApp.Web.csproj.CopyComplete
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Web\obj\Debug\ATSCADAFastWeb.Web.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Web\obj\Debug\ATSCADAFastWeb.Web.pdb
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Web\bin\DriverPluginInterface.dll

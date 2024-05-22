@@ -54,36 +54,40 @@ namespace ATSCADAWebApp.Component.DataReporter
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(88, 363);
+            this.btnDown.Location = new System.Drawing.Point(117, 447);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(75, 23);
+            this.btnDown.Size = new System.Drawing.Size(100, 28);
             this.btnDown.TabIndex = 7;
             this.btnDown.Text = "Down";
             this.btnDown.UseVisualStyleBackColor = true;
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(88, 334);
+            this.btnUp.Location = new System.Drawing.Point(117, 411);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(75, 23);
+            this.btnUp.Size = new System.Drawing.Size(100, 28);
             this.btnUp.TabIndex = 6;
             this.btnUp.Text = "Up";
             this.btnUp.UseVisualStyleBackColor = true;
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(8, 363);
+            this.btnRemove.Location = new System.Drawing.Point(11, 447);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.Size = new System.Drawing.Size(100, 28);
             this.btnRemove.TabIndex = 5;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // btnAddUpdate
             // 
-            this.btnAddUpdate.Location = new System.Drawing.Point(8, 334);
+            this.btnAddUpdate.Location = new System.Drawing.Point(11, 411);
+            this.btnAddUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddUpdate.Name = "btnAddUpdate";
-            this.btnAddUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnAddUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnAddUpdate.TabIndex = 4;
             this.btnAddUpdate.Text = "Update";
             this.btnAddUpdate.UseVisualStyleBackColor = true;
@@ -97,10 +101,11 @@ namespace ATSCADAWebApp.Component.DataReporter
             this.lstvDataReporterItem.FullRowSelect = true;
             this.lstvDataReporterItem.GridLines = true;
             this.lstvDataReporterItem.HideSelection = false;
-            this.lstvDataReporterItem.Location = new System.Drawing.Point(8, 146);
+            this.lstvDataReporterItem.Location = new System.Drawing.Point(11, 180);
+            this.lstvDataReporterItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstvDataReporterItem.MultiSelect = false;
             this.lstvDataReporterItem.Name = "lstvDataReporterItem";
-            this.lstvDataReporterItem.Size = new System.Drawing.Size(379, 182);
+            this.lstvDataReporterItem.Size = new System.Drawing.Size(504, 223);
             this.lstvDataReporterItem.TabIndex = 26;
             this.lstvDataReporterItem.UseCompatibleStateImageBehavior = false;
             this.lstvDataReporterItem.View = System.Windows.Forms.View.Details;
@@ -123,10 +128,11 @@ namespace ATSCADAWebApp.Component.DataReporter
             // tabElement
             // 
             this.tabElement.Controls.Add(this.pageProperties);
-            this.tabElement.Location = new System.Drawing.Point(8, 8);
+            this.tabElement.Location = new System.Drawing.Point(11, 10);
+            this.tabElement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabElement.Name = "tabElement";
             this.tabElement.SelectedIndex = 0;
-            this.tabElement.Size = new System.Drawing.Size(383, 132);
+            this.tabElement.Size = new System.Drawing.Size(511, 162);
             this.tabElement.TabIndex = 25;
             // 
             // pageProperties
@@ -137,10 +143,11 @@ namespace ATSCADAWebApp.Component.DataReporter
             this.pageProperties.Controls.Add(this.txtName);
             this.pageProperties.Controls.Add(this.lblAlias);
             this.pageProperties.Controls.Add(this.lblColor);
-            this.pageProperties.Location = new System.Drawing.Point(4, 22);
+            this.pageProperties.Location = new System.Drawing.Point(4, 25);
+            this.pageProperties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pageProperties.Name = "pageProperties";
-            this.pageProperties.Padding = new System.Windows.Forms.Padding(3);
-            this.pageProperties.Size = new System.Drawing.Size(375, 106);
+            this.pageProperties.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageProperties.Size = new System.Drawing.Size(503, 133);
             this.pageProperties.TabIndex = 0;
             this.pageProperties.Text = "Properties";
             this.pageProperties.UseVisualStyleBackColor = true;
@@ -148,67 +155,75 @@ namespace ATSCADAWebApp.Component.DataReporter
             // txtColor
             // 
             this.txtColor.Color = "#008080";
-            this.txtColor.Location = new System.Drawing.Point(81, 68);
+            this.txtColor.Location = new System.Drawing.Point(108, 84);
+            this.txtColor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(277, 20);
+            this.txtColor.Size = new System.Drawing.Size(369, 25);
             this.txtColor.TabIndex = 20;
             // 
             // txtAlias
             // 
-            this.txtAlias.Location = new System.Drawing.Point(81, 41);
+            this.txtAlias.Location = new System.Drawing.Point(108, 50);
+            this.txtAlias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAlias.Name = "txtAlias";
-            this.txtAlias.Size = new System.Drawing.Size(277, 20);
+            this.txtAlias.Size = new System.Drawing.Size(368, 22);
             this.txtAlias.TabIndex = 2;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(17, 17);
+            this.lblName.Location = new System.Drawing.Point(23, 21);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(49, 17);
             this.lblName.TabIndex = 16;
             this.lblName.Text = "Name:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(81, 14);
+            this.txtName.Location = new System.Drawing.Point(108, 17);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(277, 20);
+            this.txtName.Size = new System.Drawing.Size(368, 22);
             this.txtName.TabIndex = 1;
             // 
             // lblAlias
             // 
             this.lblAlias.AutoSize = true;
-            this.lblAlias.Location = new System.Drawing.Point(17, 45);
+            this.lblAlias.Location = new System.Drawing.Point(23, 55);
+            this.lblAlias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlias.Name = "lblAlias";
-            this.lblAlias.Size = new System.Drawing.Size(32, 13);
+            this.lblAlias.Size = new System.Drawing.Size(42, 17);
             this.lblAlias.TabIndex = 18;
             this.lblAlias.Text = "Alias:";
             // 
             // lblColor
             // 
             this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(17, 72);
+            this.lblColor.Location = new System.Drawing.Point(23, 89);
+            this.lblColor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(34, 13);
+            this.lblColor.Size = new System.Drawing.Size(45, 17);
             this.lblColor.TabIndex = 19;
             this.lblColor.Text = "Color:";
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(312, 363);
+            this.btnCancel.Location = new System.Drawing.Point(416, 447);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(312, 334);
+            this.btnOK.Location = new System.Drawing.Point(416, 411);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(100, 28);
             this.btnOK.TabIndex = 8;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -216,10 +231,10 @@ namespace ATSCADAWebApp.Component.DataReporter
             // ATSCADADataReporterItemEditor
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(396, 394);
+            this.ClientSize = new System.Drawing.Size(528, 485);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
             this.Controls.Add(this.btnRemove);
@@ -230,6 +245,7 @@ namespace ATSCADAWebApp.Component.DataReporter
             this.Controls.Add(this.btnOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ATSCADADataReporterItemEditor";

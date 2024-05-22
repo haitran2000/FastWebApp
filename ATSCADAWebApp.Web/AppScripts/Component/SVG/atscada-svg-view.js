@@ -49,6 +49,7 @@
             this.arrValue[i].type = this.arrValueType[i][0];
             this.arrValue[i].min = this.arrValueType[i][2];
             this.arrValue[i].max = this.arrValueType[i][3];
+            this.arrValue[i].attribute = this.arrValueType[i][4];
         }
 
         // Theo dõi sự kiện 'valueChanged' trên các mục SVG để thực hiện hành động `this.cutaway(data.e.newValue, cuteway)`
@@ -127,8 +128,8 @@
         }
     }
    // Hàm áp dụng hiệu ứng nhấp nháy cho khối vuông
-    applyBlinkEffect(element) {
-        element.style.fill = 'red'; // Đổi màu nền thành đỏ
+    applyBlinkEffect(element,color) {
+        element.style.fill = color; // Đổi màu nền thành đỏ
         element.style.animation = 'blink-animation 1s infinite';
     }
     // Hàm loại bỏ hiệu ứng nhấp nháy khỏi khối vuông theo Alarm
@@ -144,76 +145,92 @@
     // Hàm `ValueChanged(value, item, index)` được gọi khi giá trị của một mục thay đổi
     ValueChanged(value, item, index) {
         // Kiểm tra nếu giá trị là null hoặc undefined, thoát khỏi hàm
-        if (!value) {
-            //if (item.properties === "Status") {
-            //    this.statusText = document.getElementById(item.id);
-            //    if (item.value != null) {
-            //        this.statusText.innerHTML = "GOOD";
-            //    }
-            //    else {
-            //        this.statusText.innerHTML = "BAD";
-            //    }
-            //}
+        if (!value && !item.value) {
+            if (item.properties === "Status") {
+                this.statusText = document.getElementById(item.id);
+                const arrTextStatus = item.attribute.split("--");
+                if (item.type === "Text") {
+                    if (item.value != null) {
+                        this.statusText.innerHTML = arrTextStatus[1];
+                    }
+                    else {
+                        this.statusText.innerHTML = arrTextStatus[0];
+                    }
+                }
+                if (item.type === "Color") {
+                    if (item.value != null) {
+                        this.statusText.style.fill = arrTextStatus[1];
+                    }
+                    else {
+                        this.statusText.style.fill = arrTextStatus[0];
+                    }
+                }
+            }
             return;
+        };
+        if (item.properties === "Status") {
+            this.statusText = document.getElementById(item.id);
+            const arrTextStatus = item.attribute.split("--");
+            if (item.type === "Text") {
+                if (item.value != null) {
+                    this.statusText.innerHTML = arrTextStatus[1].toString();
+                }
+            }
+            if (item.type === "Color") {
+                if (item.value != null) {
+                    this.statusText.style.fill = arrTextStatus[1].toString();
+                }
+            }
         }
-        //else {
-        //    if (item.properties === "Status") {
-        //        this.statusText = document.getElementById(item.id);
-        //        if (item.value != null) {
-        //            this.statusText.innerHTML = "GOOD";
-        //        }
-        //        else {
-        //            this.statusText.innerHTML = "BAD";
-        //        }
-        //    }
-        //};
-
         // Xử lý các trường hợp tùy thuộc vào thuộc tính của mục (item)
         if (item.properties === "Value") {
             // Nếu thuộc tính là "Value", chuyển đổi giá trị và hiển thị lên giao diện
-            this.roundValue = this.convertValue(value, item.type);
+            this.roundValue = this.convertValue(value, "String");
             this.valueText = document.getElementById(item.id);
             this.valueText.innerHTML = this.roundValue;
-        } else if (item.properties === "Status") {
+        } else if (item.properties === "Animation") {
             // Nếu thuộc tính là "Status"
             this.elemetAnimetion = document.getElementById(item.id);
+            const pairs = item.attribute.split(',');
+
+            // Khởi tạo mảng để lưu trữ các cặp key-value
+            const keyValueList = [];
+
+            // Lặp qua từng cặp key-value
+            pairs.forEach(pair => {
+                // Tách cặp key-value thành key và value
+                const [key, value] = pair.split('-');
+
+                // Tạo đối tượng mới chứa key và value và đưa vào mảng keyValueList
+                keyValueList.push({ key: parseInt(key), value });
+            });
             if (item.type === "Color") {
                 // Nếu kiểu là "Color", thay đổi màu sắc dựa trên giá trị
-                this.elemetAnimetion.style.fill = value === "1" ? "red" : "green";
-            }
-            if (item.type === "Blink") {
-                // Nếu kiểu là "Blink", áp dụng hiệu ứng nhấp nháy
-                if (value === "1") {
-                    this.applyBlinkEffect(this.elemetAnimetion);
-                } else {
-                    this.removeBlinkEffect(this.elemetAnimetion);
+                //this.elemetAnimetion.style.fill = value === "1" ? "red" : "green";
+                for (let i = 0; i < keyValueList.length; i++) {
+                    const currentElement = keyValueList[i];
+                    if (value < currentElement.key) {
+                        this.elemetAnimetion.style.fill = currentElement.value;
+                        break;
+                    } else if (value >= currentElement.key && value <= keyValueList[i + 1].key) {
+                        this.elemetAnimetion.style.fill = currentElement.value;
+                        break;
+                    }
                 }
             }
-            if (item.type == "IsRunning") {
-                // Nếu kiểu là "IsRunning", xử lý hiển thị chạy của một thành phần (ví dụ: quạt)
-                // Gợi ý: code đang bị comment để tránh tạo ra CSS mới mỗi lần xảy ra sự kiện "ValueChanged"
-                // Nếu cần, hãy bỏ comment để tạo hiệu ứng quay (rotate) trên thành phần
-                //this.fan = document.getElementById(item.id);
-                //const styleElement = document.createElement("style");
+            if (item.type === "Blink") {
+                this.elemetAnimetion.style.fill = value === "1" ? "red" : "green";
+                for (let i = 0; i < keyValueList.length; i++) {
+                    const currentElement = keyValueList[i];
+                    if (value < currentElement.key) {
+                        this.applyBlinkEffect(this.elemetAnimetion, currentElement.value);
+                        break;
+                    }
+                    else if (value >= currentElement.key && value <= keyValueList[i + 1].key) {
+                        this.applyBlinkEffect(this.elemetAnimetion, currentElement.value);
 
-                //styleElement.textContent = `
-                //  #fan {
-                //    animation: rotate 2s linear infinite;
-                //    transform-origin: center;
-                //  }
-
-                //  @keyframes rotate {
-                //    from {
-                //      transform: rotate(0deg);
-                //    }
-                //    to {
-                //      transform: rotate(360deg);
-                //    }
-                //  }
-                //`;
-
-                //document.head.appendChild(styleElement);
-                //this.rotate();
+                    }
+                }
             }
         }
     }

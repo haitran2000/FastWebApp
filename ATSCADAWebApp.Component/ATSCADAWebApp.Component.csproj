@@ -44,6 +44,9 @@
     <Reference Include="iGraphicTools">
       <HintPath>C:\Program Files\ATPro\ATSCADA\iGraphicTools.dll</HintPath>
     </Reference>
+    <Reference Include="iTools">
+      <HintPath>C:\Program Files\ATPro\ATSCADA\iTools.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
     <Reference Include="SVG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SvgNet.1.0.2\lib\net40\SVG.dll</HintPath>
@@ -51,6 +54,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -91,12 +97,19 @@
       <DependentUpon>ATSCADASVGAlarmEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="SVG\ATSCADASVGAlarmItem.cs" />
+    <Compile Include="SVG\ATSCADASVGHyperLinkEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SVG\ATSCADASVGHyperLinkEditor.Designer.cs">
+      <DependentUpon>ATSCADASVGHyperLinkEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="SVG\ATSCADASVGCutawayEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SVG\ATSCADASVGCutawayEditor.Designer.cs">
       <DependentUpon>ATSCADASVGCutawayEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="SVG\ATSCADASVGHyperLink.cs" />
     <Compile Include="SVG\ATSCADASVGCutawayItem.cs" />
     <Compile Include="SVG\ATSCADASVGValueItem.cs" />
     <Compile Include="SVG\ATSCADASVGValueEditor.cs">
@@ -247,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SVG\ATSCADASVGAlarmEditor.resx">
       <DependentUpon>ATSCADASVGAlarmEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SVG\ATSCADASVGHyperLinkEditor.resx">
+      <DependentUpon>ATSCADASVGHyperLinkEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SVG\ATSCADASVGCutawayEditor.resx">
       <DependentUpon>ATSCADASVGCutawayEditor.cs</DependentUpon>

@@ -8,6 +8,7 @@ using ATSCADAWebApp.Extension.Method;
 using ATSCADAWebApp.Component.SVGValue;
 using ATSCADAWebApp.Component.SVGAlarm;
 using ATSCADAWebApp.Component.SVGCutaway;
+using System.Diagnostics;
 
 namespace ATSCADAWebApp.Component.SVG
 {
@@ -91,9 +92,9 @@ namespace ATSCADAWebApp.Component.SVG
             this.lstvSVGValueItem.Items.Clear();
             foreach (var item in this.component.Items)
             {
-                var listViewItem = this.lstvSVGValueItem.Items.Add(new ListViewItem(new string[4]
+                var listViewItem = this.lstvSVGValueItem.Items.Add(new ListViewItem(new string[5]
                 {
-                    item.Name, item.DataTagName,item.Properties,item.Type
+                    item.Name, item.DataTagName,item.Properties,item.Type,item.Attribute
                 }));
 
                 listViewItem.UseItemStyleForSubItems = false;
@@ -187,17 +188,6 @@ namespace ATSCADAWebApp.Component.SVG
                 LoadListView();
         }
 
-        private void btnPickColor_Click(object sender, EventArgs e)
-        {
-            ColorDialog dlg = new ColorDialog(); //Khởi tạo đối tượng ColorDialog 
-            dlg.ShowDialog(); //Hiển thị hộp thoại
-
-            if (dlg.ShowDialog() == DialogResult.OK) //Nếu nhấp vào nút OK trên hộp thoại
-            {
-                txtColor.Color = dlg.Color.Name;//Trả lại tên của màu đã lựa chọn
-                this.component.Color = txtColor.Color;
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -213,6 +203,23 @@ namespace ATSCADAWebApp.Component.SVG
             var dialogResult = itemCutaway.ShowDialog();
             if (dialogResult == DialogResult.OK)
                 LoadListViewCutaWay();
+        }
+
+        private void btnOpenApp_Click(object sender, EventArgs e)
+        {
+            string appPath = @"E:\Rasc\ATSVGEDITOR.appref-ms";
+            OpenApplication(appPath);
+        }
+        static void OpenApplication(string path)
+        {
+            try
+            {
+                Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
 }

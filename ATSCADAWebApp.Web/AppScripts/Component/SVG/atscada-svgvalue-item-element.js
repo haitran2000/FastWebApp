@@ -9,7 +9,8 @@ export class AtscadaSVGValueItemElement extends HTMLElement {
         this.type='Type'
         this.speedTagName ='TaskName.TagName'
         this.min='0'
-        this.max='100'
+        this.max = '100'
+        this.attribute = 'attribute'
     }
 
     connectedCallback() {
@@ -20,6 +21,7 @@ export class AtscadaSVGValueItemElement extends HTMLElement {
         this.speedTagName = this.getAttribute('at-speed') || this.type;
         this.min = this.getAttribute('at-min') || this.min;
         this.max = this.getAttribute('at-max') || this.max;
+        this.attribute = this.getAttribute('at-attribute') || this.attribute;
     }   
 }
 customElements.define('atscada-svgvalue-item', AtscadaSVGValueItemElement);
