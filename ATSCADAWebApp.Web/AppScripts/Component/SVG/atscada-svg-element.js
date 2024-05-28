@@ -11,18 +11,66 @@ export class AtscadaSVGElement extends HTMLElement {
         this.shadowRoot.innerHTML = `<slot></slot>`;
         this.SVGAlarmItems = [];
         this.SVGCutawayItems = [];
+        this.SVGHyperLinkItems = [];
+        this.SVGControlValueItems = [];
         this.SVGItems = [];
         this.SVGItemsProperties = [];
         this.SVGItemsType = [];
         this.dataTagNames = [];
         this.dataAlarmTagNames = [];
         this.dataCutawayTagNames = [];
+        this.dataHyperLinkTagNames = [];
+        this.dataControlValueTagNames = [];
         this.listen();
     }
     listen() {
         // Tạo một <style> element và chèn vào <head> của trang
         const style = document.createElement('style');
+        style.innerHTML = `
+            #overlay {
+                display: none; /* Ẩn overlay ban đầu */
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+            }
+            #popup {
+                display: none; /* Ẩn popup ban đầu */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                background-color: #2e2828;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                border: 1px solid #ccc;
+            }
+            #popup button {
+                width: calc(100% - 10px);
+                background-color: #40648b;
+                color: #fff;
+                border: none;
+                padding: 3px 16px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            #popup input[type="text"] {
+                width: calc(100% - 10px);
+                padding: 5px 0; /* Thay đổi giá trị padding top và bottom */
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        `;
         document.head.appendChild(style);
+        // Thêm HTML cho popup và overlay
+        document.body.insertAdjacentHTML('beforeend', `
+            <div id="overlay"></div>
+            <div id="popup"></div>
+        `);
 
         // Định nghĩa các keyframes cho animation blink-animation
         const keyframes = `
@@ -43,12 +91,29 @@ export class AtscadaSVGElement extends HTMLElement {
             const elementsValue = document.getElementsByTagName('atscada-svgvalue-item');
             const elementsAlarm = document.getElementsByTagName('atscada-svgalarm-item');
             const elementsCutaway = document.getElementsByTagName('atscada-svgcutaway-item');
+            const elementsLyperLink = document.getElementsByTagName('atscada-svghyperlink-item');
+            const elementsControlValue = document.getElementsByTagName('atscada-svgcontrolvalue-item');
 
             // Chuyển đổi NodeList thành mảng
             const elementsArray = Array.from(elementsValue);
             const elementsArrayCutaway = Array.from(elementsCutaway);
             const elementsArrayAlarm = Array.from(elementsAlarm);
-
+            const elementsArrayHyperLink = Array.from(elementsLyperLink);
+            const elementsArrayControlValue = Array.from(elementsControlValue);
+            // Xử lý các phần tử <atscada-svgcutaway-item>
+            for (let i = 0; i < elementsArrayControlValue.length; i++) {
+                // Lấy thông tin từ các phần tử và đưa vào các mảng dữ liệu của custom element
+                this.dataControlValueTagNames.push(elementsArrayControlValue[i].dataTagName);
+                const Arr = [elementsArrayControlValue[i].content, elementsArrayControlValue[i].dataTagName, elementsArrayControlValue[i].type, elementsArrayControlValue[i].atribute]
+                this.SVGControlValueItems.push(Arr)
+            }
+            // Xử lý các phần tử <atscada-svgcutaway-item>
+            for (let i = 0; i < elementsArrayHyperLink.length; i++) {
+                // Lấy thông tin từ các phần tử và đưa vào các mảng dữ liệu của custom element
+                this.dataHyperLinkTagNames.push(elementsArrayHyperLink[i].dataTagName);
+                const Arr = [elementsArrayHyperLink[i].content, elementsArrayHyperLink[i].dataTagName, elementsArrayHyperLink[i].type, elementsArrayHyperLink[i].color]
+                this.SVGHyperLinkItems.push(Arr)
+            }
             // Xử lý các phần tử <atscada-svgcutaway-item>
             for (let i = 0; i < elementsArrayCutaway.length; i++) {
                 // Lấy thông tin từ các phần tử và đưa vào các mảng dữ liệu của custom element

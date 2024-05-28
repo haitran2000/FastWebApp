@@ -1,4 +1,5 @@
 ﻿using ATSCADAWebApp.Component.SVGAlarm;
+using ATSCADAWebApp.Component.SVGControlValue;
 using ATSCADAWebApp.Component.SVGCutaway;
 using ATSCADAWebApp.Component.SVGHyperLink;
 using ATSCADAWebApp.Component.SVGValue;
@@ -25,7 +26,6 @@ namespace ATSCADAWebApp.Component.SVG
 
         private string content = "Name";
 
-        private string dataTagName = "TaskName.TagName";
 
         private string color = "#008080";
         private string gridColumn = "col-sm-12";
@@ -34,6 +34,7 @@ namespace ATSCADAWebApp.Component.SVG
         private List<ATSCADASVGAlarmItem> itemsAlarm = new List<ATSCADASVGAlarmItem>();
         private List<ATSCADASVGCutawayItem> itemsCutaway = new List<ATSCADASVGCutawayItem>();
         private List<ATSCADASVGHyperLinkItem> itemsHyperLink = new List<ATSCADASVGHyperLinkItem>();
+        private List<ATSCADASVGControlValueItem> itemsControlValue = new List<ATSCADASVGControlValueItem>();
         #endregion
 
         #region PROPERTIES
@@ -102,6 +103,13 @@ namespace ATSCADAWebApp.Component.SVG
             get => this.itemsHyperLink;
             set => SetField(ref this.itemsHyperLink, value);
         }
+
+        [XmlElement("atscada-svgcontrolvalue-item")]
+        public List<ATSCADASVGControlValueItem> ItemsControlValue
+        {
+            get => this.itemsControlValue;
+            set => SetField(ref this.itemsControlValue, value);
+        }
         #endregion
 
         #region CONSTRUCTORS
@@ -158,9 +166,11 @@ namespace ATSCADAWebApp.Component.SVG
                 builder.Append(item.Render());
             foreach (var item in ItemsAlarm)
                 builder.Append(item.Render());
-            foreach (var item in itemsCutaway)
+            foreach (var item in ItemsCutaway)
                 builder.Append(item.Render());
-            foreach (var item in itemsCutaway)
+            foreach (var item in ItemsHyperLink)
+                builder.Append(item.Render());
+            foreach (var item in ItemsControlValue)
                 builder.Append(item.Render());
             builder.AppendLine($"</atscada-svg></div>");
             return builder.ToString();

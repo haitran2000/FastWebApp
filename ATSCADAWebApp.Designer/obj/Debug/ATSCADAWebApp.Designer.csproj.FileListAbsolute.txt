@@ -132,6 +132,8 @@ H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebA
 H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.exe
 H:\ATSCADA\PROJECT\2023_T08_CTY_SOJTS_OSAKA_GAS\Source\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\FastWeb Designer.exe.config
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\FastWeb Designer.exe.manifest
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\FastWeb Designer.application
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\FastWeb Designer.exe
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\FastWeb Designer.pdb
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\bin\Debug\ATSCADAFastWeb.Component.dll
@@ -156,6 +158,8 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebAp
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.View.MainView.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.csproj.GenerateResource.cache
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.csproj.CoreCompileInputs.cache
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.exe.manifest
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.application
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\ATSCADAWebApp.Designer.csproj.CopyComplete
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.exe
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Designer\obj\Debug\FastWeb Designer.pdb

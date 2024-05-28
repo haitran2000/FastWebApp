@@ -72,35 +72,44 @@ namespace ATSCADAWebApp.Component.SVGValue
             this.cbbProperties.Text = selectedItem.SubItems[2].Text;
             this.cbxDataTagName.TagName = selectedItem.SubItems[1].Text;
             this.cbbType.Text = selectedItem.SubItems[3].Text;
-            if(this.cbbProperties.SelectedItem.ToString() == "Status" && this.cbbType.SelectedItem.ToString() == "Text")
+            try
             {
-                string atribute = selectedItem.SubItems[4].Text;
-                string[] parts = atribute.Split(new string[] { "--" }, StringSplitOptions.None);
-                this.textBad.Text = parts[0];
-                this.textGood.Text = parts[1];
+                if (this.cbbProperties.SelectedItem.ToString() == "Status" && this.cbbType.SelectedItem.ToString() == "Text")
+                {
+                    string atribute = selectedItem.SubItems[4].Text;
+                    string[] parts = atribute.Split(new string[] { "--" }, StringSplitOptions.None);
+                    this.textBad.Text = parts[0];
+                    this.textGood.Text = parts[1];
+                }
+                if (this.cbbProperties.SelectedItem.ToString() == "Status" && this.cbbType.SelectedItem.ToString() == "Color")
+                {
+                    string atribute = selectedItem.SubItems[4].Text;
+                    string[] parts = atribute.Split(new string[] { "--" }, StringSplitOptions.None);
+                    this.txtBadColor.Text = parts[0];
+                    System.Drawing.Color colorbad = ColorTranslator.FromHtml(parts[0]);
+                    this.btnPickBadColor.BackColor = colorbad;
+                    this.txtGoodColor.Text = parts[1];
+                    System.Drawing.Color colorgood = ColorTranslator.FromHtml(parts[1]);
+                    this.btnPickGoodColor.BackColor = colorgood;
+                }
+                if (this.cbbProperties.SelectedItem.ToString() == "Animation")
+                {
+                    string atribute = selectedItem.SubItems[4].Text;
+                    GenerateInputs(atribute);
+                }
             }
-            if (this.cbbProperties.SelectedItem.ToString() == "Status" && this.cbbType.SelectedItem.ToString() == "Color")
+            catch
             {
-                string atribute = selectedItem.SubItems[4].Text;
-                string[] parts = atribute.Split(new string[] { "--" }, StringSplitOptions.None);
-                this.txtBadColor.Text = parts[0];
-                System.Drawing.Color colorbad = ColorTranslator.FromHtml(parts[0]);
-                this.btnPickBadColor.BackColor = colorbad;
-                this.txtGoodColor.Text = parts[1];
-                System.Drawing.Color colorgood = ColorTranslator.FromHtml(parts[1]);
-                this.btnPickGoodColor.BackColor = colorgood;
+
             }
-            if (this.cbbProperties.SelectedItem.ToString() == "Animation")
-            {
-                string atribute = selectedItem.SubItems[4].Text;
-                GenerateInputs(atribute);
-            }
+            
         }
         private void GenerateInputs(string data)
         {
             panelAnimation.Controls.Clear();
 
             var pairs = data.Split(',');
+
             inputNumber.Value = pairs.Length;
 
             for (int i = 0; i < pairs.Length; i++)
@@ -352,6 +361,8 @@ namespace ATSCADAWebApp.Component.SVGValue
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                openFileDialog.InitialDirectory = @"C:\Program Files\ATPro\ATSCADA\Reports";
+                openFileDialog.FileName = "iSVG_FileImport.xlsx";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string excelFilePath = openFileDialog.FileName;
@@ -366,12 +377,12 @@ namespace ATSCADAWebApp.Component.SVGValue
                         }
                         else
                         {
-                            MessageBox.Show("Không có dữ liệu để hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No data to display.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Đã xảy ra lỗi khi đọc tệp Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred while reading the Excel file. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -557,7 +568,7 @@ namespace ATSCADAWebApp.Component.SVGValue
         }
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var result = "";
+            var result = new HashSet<string>();
 
             foreach (System.Windows.Forms.Control control in this.panelAnimation.Controls)
             {
@@ -569,14 +580,13 @@ namespace ATSCADAWebApp.Component.SVGValue
                     {
                         var breakpoint = textBox.Text;
                         var color = ColorTranslator.ToHtml(colorButton.BackColor);
-                        result += $"{breakpoint}-{color},";
+                        result.Add($"{breakpoint}-{color}");
                     }
                 }
             }
 
-            result = result.TrimEnd(',');
-            settingAnimation = result;
-            MessageBox.Show(result);
+            settingAnimation = string.Join(",", result);
+            MessageBox.Show(settingAnimation);
         }
         private void inputNumber_TextChanged(object sender, EventArgs e)
         {

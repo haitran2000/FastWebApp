@@ -9,6 +9,11 @@ using ATSCADAWebApp.Component.SVGValue;
 using ATSCADAWebApp.Component.SVGAlarm;
 using ATSCADAWebApp.Component.SVGCutaway;
 using System.Diagnostics;
+using ATSCADAWebApp.Component.SVGHyperLink;
+using System.Collections.Generic;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System.Linq;
 
 namespace ATSCADAWebApp.Component.SVG
 {
@@ -43,7 +48,7 @@ namespace ATSCADAWebApp.Component.SVG
         public ATSCADASVGEditor(ATSCADASVG component)
         {
             InitializeComponent();
-
+            
             this.component = component;
             this.Load += (sender, e) => OnLoad();          
             this.btnOK.Click += (sender, e) => OnButtonOKClick();
@@ -52,6 +57,7 @@ namespace ATSCADAWebApp.Component.SVG
 
         private void OnLoad()
         {
+            lbLoadFileTo.Text = "";
             ComponentName = this.component.Name;
             Description = this.component.Description;
             Color = this.component.Color;
@@ -60,6 +66,8 @@ namespace ATSCADAWebApp.Component.SVG
             LoadListView();
             LoadListViewAlarm();
             LoadListViewCutaWay();
+            LoadListViewHyperLink();
+            LoadListViewControlValue();
         }       
 
         private void OnButtonOKClick()
@@ -126,7 +134,32 @@ namespace ATSCADAWebApp.Component.SVG
                 listViewItem.UseItemStyleForSubItems = false;
             }
         }
+        private void LoadListViewHyperLink()
+        {
+            this.lstvSVGHyperLinkItem.Items.Clear();
+            foreach (var item in this.component.ItemsHyperLink)
+            {
+                var listViewItem = this.lstvSVGHyperLinkItem.Items.Add(new ListViewItem(new string[4]
+                {
+                    item.Name,item.DataTagName,item.Type,item.Color
+                }));
 
+                listViewItem.UseItemStyleForSubItems = false;
+            }
+        }
+        private void LoadListViewControlValue()
+        {
+            this.listViewControl.Items.Clear();
+            foreach (var item in this.component.ItemsControlValue)
+            {
+                var listViewItem = this.listViewControl.Items.Add(new ListViewItem(new string[4]
+                {
+                    item.Name,item.DataTagName,item.Type,item.Atribute
+                }));
+
+                listViewItem.UseItemStyleForSubItems = false;
+            }
+        }
         private void OnButtonCancelClick()
         {
             this.DialogResult = DialogResult.Cancel;
@@ -207,7 +240,7 @@ namespace ATSCADAWebApp.Component.SVG
 
         private void btnOpenApp_Click(object sender, EventArgs e)
         {
-            string appPath = @"E:\Rasc\ATSVGEDITOR.appref-ms";
+            string appPath = @"C:\Program Files\ATPro\iSVGEditor\iSVG.exe";
             OpenApplication(appPath);
         }
         static void OpenApplication(string path)
@@ -220,6 +253,150 @@ namespace ATSCADAWebApp.Component.SVG
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var itemHyperLink = new ATSCADASVGHyperLinkItemEditor(this.component);
+            var dialogResult = itemHyperLink.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+                LoadListViewHyperLink();
+        }
+
+        private void btnReFresh_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                //openFileDialog.InitialDirectory = @"C:\Program Files\ATPro\ATSCADA\Reports";
+                //openFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                //openFileDialog.FileName = "iSVG_FileImport";
+                string excelFilePath = @"C:\Program Files\ATPro\ATSCADA\Reports\iSVG_FileImport.xlsx";
+                // Kiểm tra xem tệp tồn tại hay không
+                
+                try
+                    {
+                    if (File.Exists(excelFilePath))
+                    {
+                        try
+                        {
+                            List<List<string>> excelData = ReadExcelFile(excelFilePath);
+
+                            if (excelData.Count > 0)
+                            {
+                                PopulateListView(excelData);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No data to display.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("An error occurred while reading the Excel file. " + ex.Message, "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("The Excel file does not exist.", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while reading the Excel file. " + ex.Message, "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+        }
+        private void PopulateListView(List<List<string>> excelData)
+        {
+            this.lstvSVGValueItem.Items.Clear();
+            this.lstvSVGValueItem.View = System.Windows.Forms.View.Details;
+            this.component.Items.Clear();
+            bool firstIteration = true;
+            foreach (var rowData in excelData)
+            {
+                if (firstIteration)
+                {
+                    firstIteration = false;
+                    continue; // Bỏ qua vòng lặp đầu tiên
+                }
+                var row = rowData.ToArray();
+
+                // Kiểm tra xem dòng đã tồn tại trong ListView hay chưa
+                bool exists = false;
+                foreach (ListViewItem item in this.lstvSVGValueItem.Items)
+                {
+                    if (item.SubItems.Count >= 5 &&
+                        item.SubItems[0].Text == row[0] &&
+                        item.SubItems[1].Text == row[1] &&
+                        item.SubItems[2].Text == row[2] &&
+                        item.SubItems[3].Text == row[3] &&
+                        item.SubItems[4].Text == row[4])
+                    {
+                        exists = true;
+                        break;
+                    }
+                }
+
+                // Nếu dòng không tồn tại, thêm dòng mới
+                if (!exists)
+                {
+                    var newListViewItem = this.lstvSVGValueItem.Items.Add(new ListViewItem(row));
+                    ATSCADASVGValueItem item = new ATSCADASVGValueItem();
+                    item.Name = row[0];
+                    item.DataTagName = row[1];
+                    item.Properties = row[2];
+                    item.Type = row[3];
+                    item.Attribute = row[4];
+                    this.component.Items.Add(item);
+                    newListViewItem.UseItemStyleForSubItems = false;
+                }
+            }
+            lbLoadFileTo.Text = @"Load file C:\Program Files\ATPro\ATSCADA\Reports\iSVG_FileImport.xlsx";
+        }
+        private List<List<string>> ReadExcelFile(string filePath)
+        {
+            List<List<string>> excelData = new List<List<string>>();
+
+            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filePath, false))
+            {
+                WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                IEnumerable<Sheet> sheets = spreadsheetDocument.WorkbookPart.Workbook.Descendants<Sheet>();
+                WorksheetPart worksheetPart = (WorksheetPart)workbookPart.GetPartById(sheets.First().Id);
+
+                SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().First();
+                foreach (Row row in sheetData.Elements<Row>())
+                {
+                    List<string> rowData = new List<string>();
+                    foreach (Cell cell in row.Elements<Cell>())
+                    {
+                        rowData.Add(GetCellValue(cell, spreadsheetDocument));
+                    }
+                    excelData.Add(rowData);
+                }
+            }
+
+            return excelData;
+        }
+        private string GetCellValue(Cell cell, SpreadsheetDocument spreadsheetDocument)
+        {
+            SharedStringTablePart sharedStringPart = spreadsheetDocument.WorkbookPart.SharedStringTablePart;
+            if (cell.DataType != null && cell.DataType.Value == CellValues.SharedString)
+            {
+                int index = int.Parse(cell.CellValue.Text);
+                return sharedStringPart.SharedStringTable.ElementAt(index).InnerText;
+            }
+            else
+            {
+                return cell.CellValue.Text;
+            }
+        }
+
+        private void btnEditControl_Click(object sender, EventArgs e)
+        {
+            var itemProperties = new ATSCADASVGControlValueItemEditor(this.component);
+            var dialogResult = itemProperties.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+                LoadListViewControlValue();
         }
     }
 }

@@ -7,9 +7,13 @@ export class AtscadaTaskMultiModel {
         this.dataTags = [];
         this.dataAlarmTags = [];
         this.dataCutawayTagNames = [];
+        this.dataHyperLinkTagNames = [];
+        this.dataControlValueTagNames = [];
         this.dataTagAlarm = element.dataAlarmTagNames;
         this.dataTagNames = element.dataTagNames;
         this.dataTagCutaway = element.dataCutawayTagNames;
+        this.dataTagHyperLink = element.dataHyperLinkTagNames;
+        this.dataTagControlValue = element.dataControlValueTagNames;
         this.taskLoader = new AtscadaTaskLoader(element);       
     }
 
@@ -32,6 +36,16 @@ export class AtscadaTaskMultiModel {
                 if (!dataCollection.contains(dataCutewayTagName))
                     dataCollection.add(dataCutewayTagName);
                 this.dataCutawayTagNames.push(dataCollection.get(dataCutewayTagName));
+            }
+            for (const dataHyperLinkTagName of this.dataTagHyperLink) {
+                if (!dataCollection.contains(dataHyperLinkTagName))
+                    dataCollection.add(dataHyperLinkTagName);
+                this.dataHyperLinkTagNames.push(dataCollection.get(dataHyperLinkTagName));
+            }
+            for (const dataControlTagName of this.dataTagControlValue) {
+                if (!dataCollection.contains(dataControlTagName))
+                    dataCollection.add(dataControlTagName);
+                this.dataControlValueTagNames.push(dataCollection.get(dataControlTagName));
             }
         }
     }

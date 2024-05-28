@@ -46,19 +46,22 @@ namespace ATSCADAWebApp.Designer.View
             // 
             this.txtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDescription.Location = new System.Drawing.Point(0, 0);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
-            this.txtDescription.Size = new System.Drawing.Size(275, 213);
+            this.txtDescription.Size = new System.Drawing.Size(367, 262);
             this.txtDescription.TabIndex = 2;
             // 
             // lstbComponent
             // 
             this.lstbComponent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstbComponent.FormattingEnabled = true;
+            this.lstbComponent.ItemHeight = 16;
             this.lstbComponent.Location = new System.Drawing.Point(0, 0);
+            this.lstbComponent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstbComponent.Name = "lstbComponent";
-            this.lstbComponent.Size = new System.Drawing.Size(153, 213);
+            this.lstbComponent.Size = new System.Drawing.Size(204, 262);
             this.lstbComponent.TabIndex = 1;
             // 
             // componentContainer
@@ -66,7 +69,8 @@ namespace ATSCADAWebApp.Designer.View
             this.componentContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.componentContainer.Location = new System.Drawing.Point(8, 7);
+            this.componentContainer.Location = new System.Drawing.Point(11, 9);
+            this.componentContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.componentContainer.Name = "componentContainer";
             // 
             // componentContainer.Panel1
@@ -77,16 +81,18 @@ namespace ATSCADAWebApp.Designer.View
             // 
             this.componentContainer.Panel2.Controls.Add(this.lblWebsite);
             this.componentContainer.Panel2.Controls.Add(this.txtDescription);
-            this.componentContainer.Size = new System.Drawing.Size(432, 213);
-            this.componentContainer.SplitterDistance = 153;
+            this.componentContainer.Size = new System.Drawing.Size(576, 262);
+            this.componentContainer.SplitterDistance = 204;
+            this.componentContainer.SplitterWidth = 5;
             this.componentContainer.TabIndex = 14;
             // 
             // lblWebsite
             // 
             this.lblWebsite.AutoSize = true;
-            this.lblWebsite.Location = new System.Drawing.Point(1, 44);
+            this.lblWebsite.Location = new System.Drawing.Point(1, 54);
+            this.lblWebsite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWebsite.Name = "lblWebsite";
-            this.lblWebsite.Size = new System.Drawing.Size(109, 13);
+            this.lblWebsite.Size = new System.Drawing.Size(135, 17);
             this.lblWebsite.TabIndex = 3;
             this.lblWebsite.TabStop = true;
             this.lblWebsite.Text = "https://atscada.com/";
@@ -96,9 +102,10 @@ namespace ATSCADAWebApp.Designer.View
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(365, 226);
+            this.btnCancel.Location = new System.Drawing.Point(487, 278);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -107,9 +114,10 @@ namespace ATSCADAWebApp.Designer.View
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.Enabled = false;
-            this.btnOK.Location = new System.Drawing.Point(284, 226);
+            this.btnOK.Location = new System.Drawing.Point(379, 278);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(100, 28);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -117,15 +125,16 @@ namespace ATSCADAWebApp.Designer.View
             // AddComponentView
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(446, 256);
+            this.ClientSize = new System.Drawing.Size(595, 315);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.componentContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddComponentView";

@@ -35,8 +35,8 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
                 var listViewItem = this.lstvSVGHyperLinkItem.Items.Add(new ListViewItem(new string[4]
                 {
                     SVGHyperLinkItem.Name,
-                    SVGHyperLinkItem.Type,
                     SVGHyperLinkItem.DataTagName,
+                    SVGHyperLinkItem.Type,
                      SVGHyperLinkItem.Color
                 }));
                 listViewItem.UseItemStyleForSubItems = false;
@@ -70,7 +70,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
                     if (
                         listViewItem.SubItems[1].Text != dataTagName)
                     {
-                        listViewItem.SubItems[2].Text = dataTagName;
+                        listViewItem.SubItems[1].Text = dataTagName;
 
                         hasChanges = true;
                     }

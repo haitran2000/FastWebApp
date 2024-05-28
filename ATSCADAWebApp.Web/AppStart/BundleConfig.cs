@@ -57,6 +57,7 @@ namespace ATSCADAWebApp.Web
                 "~/AppScripts/Component/AlarmViewer/atscada-alarm-viewer-element.js",
                  "~/AppScripts/Component/Slider/atscada-slider-element.js",
                 "~/AppScripts/Component/Input/atscada-input-element.js",
+                "~/AppScripts/Component/Input/atscada-svgvalue-element.js",
                 "~/AppScripts/Component/AlarmReporter/atscada-alarm-reporter-element.js",
                 "~/AppScripts/Component/DataReporter/atscada-data-reporter-element.js",
                 "~/AppScripts/Component/DataReporter/atscada-data-reporter-item-element.js"

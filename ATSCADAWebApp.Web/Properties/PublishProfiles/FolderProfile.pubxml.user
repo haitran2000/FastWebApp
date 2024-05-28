@@ -98,6 +98,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="AppScripts/Component/SVG/atscada-svgcutaway-item-element.js">
       <publishTime>04/08/2024 13:41:36</publishTime>
     </File>
+    <File Include="AppScripts/Component/SVG/atscada-svghyperlink-item-element.js">
+      <publishTime>04/08/2024 13:41:36</publishTime>
+    </File>
     <File Include="AppScripts/Component/SVG/atscada-svgvalue-item-element.js">
       <publishTime>04/09/2024 17:04:43</publishTime>
     </File>

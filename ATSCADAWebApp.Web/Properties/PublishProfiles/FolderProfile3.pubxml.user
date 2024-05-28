@@ -83,6 +83,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="AppScripts/Component/Gauge\atscada-gauge-element.js">
       <publishTime>04/01/2024 08:23:21</publishTime>
     </File>
+    <File Include="AppScripts/Component/SVG/atscada-svghyperlink-item-element.js">
+      <publishTime>04/01/2024 08:23:21</publishTime>
+    </File>
     <File Include="AppScripts/Component/SVG/atscada-svgcutaway-item-element.js">
       <publishTime>04/01/2024 08:23:21</publishTime>
     </File>

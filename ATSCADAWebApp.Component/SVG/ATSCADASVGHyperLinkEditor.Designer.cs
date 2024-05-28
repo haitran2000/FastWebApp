@@ -59,7 +59,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(624, 482);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 10;
@@ -69,7 +69,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(516, 482);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 28);
             this.btnOK.TabIndex = 9;
@@ -79,7 +79,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(108, 17);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(228, 22);
             this.txtName.TabIndex = 1;
@@ -108,7 +108,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // 
             this.tabElement.Controls.Add(this.pageProperties);
             this.tabElement.Location = new System.Drawing.Point(11, 10);
-            this.tabElement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabElement.Margin = new System.Windows.Forms.Padding(4);
             this.tabElement.Name = "tabElement";
             this.tabElement.SelectedIndex = 0;
             this.tabElement.Size = new System.Drawing.Size(713, 143);
@@ -125,9 +125,9 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             this.pageProperties.Controls.Add(this.lblTagName);
             this.pageProperties.Controls.Add(this.txtName);
             this.pageProperties.Location = new System.Drawing.Point(4, 25);
-            this.pageProperties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageProperties.Margin = new System.Windows.Forms.Padding(4);
             this.pageProperties.Name = "pageProperties";
-            this.pageProperties.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageProperties.Padding = new System.Windows.Forms.Padding(4);
             this.pageProperties.Size = new System.Drawing.Size(705, 114);
             this.pageProperties.TabIndex = 0;
             this.pageProperties.Text = "Properties";
@@ -142,14 +142,16 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 25;
             this.label3.Text = "Type";
+            this.label3.Visible = false;
             // 
             // txtType
             // 
             this.txtType.Location = new System.Drawing.Point(482, 21);
-            this.txtType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtType.Margin = new System.Windows.Forms.Padding(4);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(119, 22);
             this.txtType.TabIndex = 24;
+            this.txtType.Visible = false;
             // 
             // label2
             // 
@@ -160,20 +162,22 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 23;
             this.label2.Text = "Color";
+            this.label2.Visible = false;
             // 
             // txtColorLink
             // 
             this.txtColorLink.Location = new System.Drawing.Point(482, 58);
-            this.txtColorLink.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtColorLink.Margin = new System.Windows.Forms.Padding(4);
             this.txtColorLink.Name = "txtColorLink";
             this.txtColorLink.Size = new System.Drawing.Size(119, 22);
             this.txtColorLink.TabIndex = 22;
+            this.txtColorLink.Visible = false;
             // 
             // cbxDataTagName
             // 
             this.cbxDataTagName.InRuntime = false;
             this.cbxDataTagName.Location = new System.Drawing.Point(107, 58);
-            this.cbxDataTagName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbxDataTagName.Margin = new System.Windows.Forms.Padding(5);
             this.cbxDataTagName.Name = "cbxDataTagName";
             this.cbxDataTagName.Size = new System.Drawing.Size(229, 26);
             this.cbxDataTagName.TabIndex = 3;
@@ -190,7 +194,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             this.lstvSVGHyperLinkItem.GridLines = true;
             this.lstvSVGHyperLinkItem.HideSelection = false;
             this.lstvSVGHyperLinkItem.Location = new System.Drawing.Point(11, 161);
-            this.lstvSVGHyperLinkItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstvSVGHyperLinkItem.Margin = new System.Windows.Forms.Padding(4);
             this.lstvSVGHyperLinkItem.MultiSelect = false;
             this.lstvSVGHyperLinkItem.Name = "lstvSVGHyperLinkItem";
             this.lstvSVGHyperLinkItem.Size = new System.Drawing.Size(707, 314);
@@ -201,12 +205,12 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // colID
             // 
             this.colID.Text = "ID";
-            this.colID.Width = 100;
+            this.colID.Width = 377;
             // 
             // colTagName
             // 
             this.colTagName.Text = "TagName";
-            this.colTagName.Width = 146;
+            this.colTagName.Width = 604;
             // 
             // columnHeader1
             // 
@@ -221,7 +225,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(123, 482);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(100, 28);
             this.btnRemove.TabIndex = 6;
@@ -231,7 +235,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(11, 482);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnUpdate.TabIndex = 5;
@@ -241,7 +245,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // btnDown
             // 
             this.btnDown.Location = new System.Drawing.Point(339, 482);
-            this.btnDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(4);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(100, 28);
             this.btnDown.TabIndex = 8;
@@ -251,7 +255,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             // btnUp
             // 
             this.btnUp.Location = new System.Drawing.Point(231, 482);
-            this.btnUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(100, 28);
             this.btnUp.TabIndex = 7;
@@ -275,7 +279,7 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
             this.Controls.Add(this.btnOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ATSCADASVGHyperLinkItemEditor";

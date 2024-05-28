@@ -194,6 +194,8 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebA
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.AlarmViewer.ATSCADAAlarmViewerEditor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.Agauge.ATSCADAAgaugeEditor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVGAlarm.ATSCADASVGAlarmItemEditor.resources
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVGHyperLink.ATSCADASVGControlValueItemEditor.resources
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVGHyperLink.ATSCADASVGHyperLinkItemEditor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVGCutaway.ATSCADASVGCutawayItemEditor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVGValue.ATSCADASVGValueItemEditor.resources
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVG.ATSCADASVGEditor.resources
@@ -218,4 +220,3 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebA
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.csproj.CopyComplete
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAFastWeb.Component.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAFastWeb.Component.pdb
-E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Component\obj\Debug\ATSCADAWebApp.Component.SVGHyperLink.ATSCADASVGHyperLinkItemEditor.resources

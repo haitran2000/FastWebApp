@@ -97,6 +97,13 @@
       <DependentUpon>ATSCADASVGAlarmEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="SVG\ATSCADASVGAlarmItem.cs" />
+    <Compile Include="SVG\ATSCADASVGControlValueItem.cs" />
+    <Compile Include="SVG\ATSCADASVGControlValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SVG\ATSCADASVGControlValue.Designer.cs">
+      <DependentUpon>ATSCADASVGControlValue.cs</DependentUpon>
+    </Compile>
     <Compile Include="SVG\ATSCADASVGHyperLinkEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SVG\ATSCADASVGAlarmEditor.resx">
       <DependentUpon>ATSCADASVGAlarmEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SVG\ATSCADASVGControlValue.resx">
+      <DependentUpon>ATSCADASVGControlValue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SVG\ATSCADASVGHyperLinkEditor.resx">
       <DependentUpon>ATSCADASVGHyperLinkEditor.cs</DependentUpon>

@@ -62,13 +62,13 @@ namespace ATSCADAWebApp.Component.SVGHyperLink
         {
             var builder = new StringBuilder();
 
-            builder.Append($"<atscada-svgHyperLink-item ");
+            builder.Append($"<atscada-svghyperlink-item ");
             builder.Append($"at-content=\"{Name}\" ");
             builder.Append($"at-color=\"{Color}\" ");
             builder.Append($"at-type=\"{Type}\" ");
             builder.Append($"at-data-tag-name=\"{DataTagName}\" ");
             builder.Append($">");
-            builder.AppendLine($"</atscada-svgHyperLink-item>");
+            builder.AppendLine($"</atscada-svghyperlink-item>");
 
 
             return builder.ToString();

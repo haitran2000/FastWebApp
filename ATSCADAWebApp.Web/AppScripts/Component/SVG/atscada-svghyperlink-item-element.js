@@ -1,21 +1,19 @@
 ﻿
-export class AtscadaSVGValueItemElement extends HTMLElement {
+export class AtscadaSVGHyperLinkItemElement extends HTMLElement {
     constructor() {
         super();
 
         this.content = 'SVGValue Item';
         this.dataTagName = 'TaskName.TagName';
-        this.min = '0';
-        this.max = '100';
-        this.id2 = '100';
+        this.type = '';
+        this.color = '';
     }
 
     connectedCallback() {
         this.content = this.getAttribute('at-content') || this.content;
         this.dataTagName = this.getAttribute('at-data-tag-name') || this.dataTagName;
-        this.min = this.getAttribute('at-min') || this.min;
-        this.max = this.getAttribute('at-max') || this.max;
-        this.id2 = this.getAttribute('at-id2') || this.id2;
+        this.type = this.getAttribute('at-type') || this.type;
+        this.color = this.getAttribute('at-color') || this.color;
     }   
 }
-customElements.define('atscada-svgcutaway-item', AtscadaSVGValueItemElement);
+customElements.define('atscada-svghyperlink-item', AtscadaSVGHyperLinkItemElement);

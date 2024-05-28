@@ -91,3 +91,4 @@ E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAWebApp.Co
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAWebApp.Core.csproj.CoreCompileInputs.cache
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAFastWeb.Core.dll
 E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAFastWeb.Core.pdb
+E:\App\ATSCADAWebApp\ATSCADAWebApp\ATSCADAWebApp.Core\obj\Debug\ATSCADAWebApp.Core.csproj.AssemblyReference.cache
